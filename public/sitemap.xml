@@ -1,293 +1,364 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <!-- Homepage -->
   <url>
     <loc>https://pdfo.dev/</loc>
-    <lastmod>2025-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pdfo.dev/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pdfo.dev/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/"/>
   </url>
-
-  <!-- PDF Tools Pages -->
+  
+  <!-- PDF Tools -->
   <url>
     <loc>https://pdfo.dev/merge-pdf</loc>
-    <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/merge-pdf" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/merge-pdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pdfo.dev/zh-cn/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pdfo.dev/zh-tw/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/merge-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/merge-pdf"/>
   </url>
-
+  
   <url>
     <loc>https://pdfo.dev/split-pdf</loc>
-    <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/split-pdf" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/split-pdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pdfo.dev/zh-cn/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pdfo.dev/zh-tw/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/split-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/split-pdf"/>
   </url>
-
+  
   <url>
     <loc>https://pdfo.dev/compress-pdf</loc>
-    <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/compress-pdf" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pdfo.dev/zh-cn/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pdfo.dev/zh-tw/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/compress-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/compress-pdf"/>
   </url>
-
+  
   <url>
     <loc>https://pdfo.dev/pdf-to-word</loc>
-    <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/pdf-to-word" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/pdf-to-word" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pdfo.dev/zh-cn/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pdfo.dev/zh-tw/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/pdf-to-word"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/pdf-to-word"/>
   </url>
-
+  
   <url>
     <loc>https://pdfo.dev/word-to-pdf</loc>
-    <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/word-to-pdf" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/word-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pdfo.dev/zh-cn/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pdfo.dev/zh-tw/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/word-to-pdf"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/word-to-pdf"/>
   </url>
-
+  
   <url>
     <loc>https://pdfo.dev/pdf-to-jpg</loc>
-    <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/pdf-to-jpg" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/pdf-to-jpg" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pdfo.dev/zh-cn/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pdfo.dev/zh-tw/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/pdf-to-jpg"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/pdf-to-jpg"/>
   </url>
-
-  <!-- Blog Pages -->
+  
+  <!-- Blog -->
   <url>
     <loc>https://pdfo.dev/blog</loc>
-    <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/blog" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/blog" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/blog" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/blog" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/blog" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/blog" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/blog"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pdfo.dev/zh-cn/blog"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pdfo.dev/zh-tw/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/blog"/>
   </url>
-
-  <!-- Static Pages -->
+  
+  <!-- Blog Posts -->
   <url>
-    <loc>https://pdfo.dev/about</loc>
-    <lastmod>2025-01-09</lastmod>
+    <loc>https://pdfo.dev/blog/complete-guide-merging-pdf-files</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/about" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/about" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/about" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/about" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/about" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/about" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/about" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/about" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/about" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/about" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/about" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog/complete-guide-merging-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog/complete-guide-merging-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog/complete-guide-merging-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog/complete-guide-merging-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog/complete-guide-merging-pdf-files"/>
   </url>
-
+  
+  <url>
+    <loc>https://pdfo.dev/blog/best-free-pdf-tools-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog/best-free-pdf-tools-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog/best-free-pdf-tools-2025"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog/best-free-pdf-tools-2025"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog/best-free-pdf-tools-2025"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog/best-free-pdf-tools-2025"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/blog/pdf-compression-techniques-explained</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog/pdf-compression-techniques-explained"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog/pdf-compression-techniques-explained"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog/pdf-compression-techniques-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog/pdf-compression-techniques-explained"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog/pdf-compression-techniques-explained"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/blog/pdf-security-password-protection-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog/pdf-security-password-protection-guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog/pdf-security-password-protection-guide"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog/pdf-security-password-protection-guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog/pdf-security-password-protection-guide"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog/pdf-security-password-protection-guide"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/blog/convert-pdf-to-word-best-practices</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog/convert-pdf-to-word-best-practices"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog/convert-pdf-to-word-best-practices"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog/convert-pdf-to-word-best-practices"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog/convert-pdf-to-word-best-practices"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog/convert-pdf-to-word-best-practices"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/blog/how-to-split-large-pdf-files</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog/how-to-split-large-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog/how-to-split-large-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog/how-to-split-large-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog/how-to-split-large-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog/how-to-split-large-pdf-files"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/blog/future-online-pdf-editors-trends</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog/future-online-pdf-editors-trends"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog/future-online-pdf-editors-trends"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog/future-online-pdf-editors-trends"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog/future-online-pdf-editors-trends"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog/future-online-pdf-editors-trends"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/blog/top-5-pdf-tools-students-professionals</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog/top-5-pdf-tools-students-professionals"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog/top-5-pdf-tools-students-professionals"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog/top-5-pdf-tools-students-professionals"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog/top-5-pdf-tools-students-professionals"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog/top-5-pdf-tools-students-professionals"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/blog/common-mistakes-avoid-editing-pdf-files</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog/common-mistakes-avoid-editing-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog/common-mistakes-avoid-editing-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog/common-mistakes-avoid-editing-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog/common-mistakes-avoid-editing-pdf-files"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog/common-mistakes-avoid-editing-pdf-files"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/blog/how-to-convert-images-to-pdf-quickly</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/blog/how-to-convert-images-to-pdf-quickly"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/blog/how-to-convert-images-to-pdf-quickly"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/blog/how-to-convert-images-to-pdf-quickly"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/blog/how-to-convert-images-to-pdf-quickly"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/blog/how-to-convert-images-to-pdf-quickly"/>
+  </url>
+  
+  <!-- Support Pages -->
   <url>
     <loc>https://pdfo.dev/help-center</loc>
-    <lastmod>2025-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/help-center" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/help-center" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/help-center" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/help-center" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/help-center" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/help-center" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/help-center" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/help-center" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/help-center" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/help-center" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/help-center" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/help-center" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/help-center"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/help-center"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/help-center"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/help-center"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/help-center"/>
   </url>
-
+  
   <url>
     <loc>https://pdfo.dev/faq</loc>
-    <lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/faq"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/api-docs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/faq" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/faq" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/faq" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/faq" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/faq" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/faq" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/faq" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/faq" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/faq" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/faq" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/faq" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/api-docs"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/api-docs"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/api-docs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/api-docs"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/api-docs"/>
   </url>
-
-  <url>
-    <loc>https://pdfo.dev/privacy-policy</loc>
-    <lastmod>2025-01-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/privacy-policy" />
-  </url>
-
-  <url>
-    <loc>https://pdfo.dev/terms-of-service</loc>
-    <lastmod>2025-01-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/terms-of-service" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/terms-of-service" />
-  </url>
-
-  <url>
-    <loc>https://pdfo.dev/security</loc>
-    <lastmod>2025-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/security" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/security" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/security" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/security" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/security" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/security" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/security" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/security" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/security" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/security" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/security" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/security" />
-  </url>
-
+  
   <url>
     <loc>https://pdfo.dev/status</loc>
-    <lastmod>2025-01-09</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.4</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/status" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/status" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/status" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/status" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/status" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pdfo.dev/ja/status" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://pdfo.dev/zh-cn/status" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pdfo.dev/pt/status" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pdfo.dev/it/status" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pdfo.dev/ru/status" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdfo.dev/ar/status" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://pdfo.dev/nl/status" />
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/status"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/status"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/status"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/status"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/status"/>
   </url>
-
+  
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://pdfo.dev/privacy-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/privacy-policy"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/terms-of-service</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/terms-of-service"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/cookie-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/cookie-policy"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/security</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/security"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/security"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/security"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/security"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/security"/>
+  </url>
+  
+  <url>
+    <loc>https://pdfo.dev/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdfo.dev/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pdfo.dev/es/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pdfo.dev/fr/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pdfo.dev/de/about"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pdfo.dev/ko/about"/>
+  </url>
+  
 </urlset>

@@ -1,51 +1,44 @@
+# Robots.txt for pdfo.dev - Online PDF Tools
+# Generated for optimal SEO and search engine indexing
+
+# Default crawling rules for all robots
 User-agent: *
 Allow: /
+
+# Block sensitive backend paths
 Disallow: /api/
 Disallow: /uploads/
 Disallow: /admin/
 Disallow: /tmp/
-Disallow: /server/
-Disallow: /node_modules/
-Disallow: /.git/
-Disallow: /dist/
-Disallow: /build/
-Disallow: /*.json$
+
+# Block temporary and cache files
+Disallow: /*.tmp$
+Disallow: /*.cache$
 Disallow: /*.log$
-Disallow: /404
-Disallow: /500
+
+# Block development and testing paths
+Disallow: /dev/
+Disallow: /test/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Set crawl delay (1 second) for respectful crawling
 Crawl-delay: 1
 
-# Allow specific search engines with optimized settings
+# Allow specific search engine bots with optimized settings
 User-agent: Googlebot
 Allow: /
-Disallow: /api/
-Disallow: /uploads/
-Disallow: /admin/
-Disallow: /tmp/
 Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
-Disallow: /api/
-Disallow: /uploads/
-Disallow: /admin/
-Disallow: /tmp/
 Crawl-delay: 1
 
-# Block problematic bots
-User-agent: MJ12bot
-Disallow: /
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
 
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-# Allow social media crawlers for Open Graph
+# Allow social media crawlers for better sharing
 User-agent: facebookexternalhit
 Allow: /
 
@@ -58,8 +51,21 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-User-agent: TelegramBot
+User-agent: Telegram
 Allow: /
+
+# Block problematic or aggressive crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
 
 # Sitemap location
 Sitemap: https://pdfo.dev/sitemap.xml
