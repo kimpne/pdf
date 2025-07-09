@@ -1,13 +1,17 @@
 import { Link } from "wouter";
 import { FileText, Facebook, Twitter, Linkedin } from "lucide-react";
+import { getCurrentLanguage, localizeUrl } from "@/lib/i18n";
 
 export default function Footer() {
+  const currentLang = getCurrentLanguage();
+  const homeUrl = localizeUrl('/', currentLang);
+  
   const toolLinks = [
-    { href: "/merge-pdf", label: "Merge PDF" },
-    { href: "/split-pdf", label: "Split PDF" },
-    { href: "/compress-pdf", label: "Compress PDF" },
-    { href: "/pdf-to-word", label: "PDF to Word" },
-    { href: "/word-to-pdf", label: "Word to PDF" },
+    { href: localizeUrl("/merge-pdf", currentLang), label: "Merge PDF" },
+    { href: localizeUrl("/split-pdf", currentLang), label: "Split PDF" },
+    { href: localizeUrl("/compress-pdf", currentLang), label: "Compress PDF" },
+    { href: localizeUrl("/pdf-to-word", currentLang), label: "PDF to Word" },
+    { href: localizeUrl("/word-to-pdf", currentLang), label: "Word to PDF" },
   ];
 
   const supportLinks = [
@@ -31,10 +35,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center mb-4">
+            <Link href={homeUrl} className="flex items-center mb-4 hover:opacity-80 transition-opacity">
               <FileText className="w-6 h-6 text-red-500 mr-2" />
               <span className="text-xl font-bold">PDF Tools</span>
-            </div>
+            </Link>
             <p className="text-slate-400 mb-4">
               The most comprehensive online PDF toolkit. 
               Fast, secure, and free to use.

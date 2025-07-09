@@ -2,9 +2,12 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, FileText } from "lucide-react";
+import { getCurrentLanguage, localizeUrl } from "@/lib/i18n";
 
 export default function Header() {
   const [location] = useLocation();
+  const currentLang = getCurrentLanguage();
+  const homeUrl = localizeUrl('/', currentLang);
 
   const navItems = [
     { href: "#tools", label: "Tools" },
@@ -18,7 +21,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <Link href={homeUrl} className="flex items-center hover:opacity-80 transition-opacity">
               <FileText className="w-8 h-8 text-red-500 mr-2" />
               <span className="text-xl font-bold text-slate-800">PDF Tools</span>
             </Link>
@@ -49,7 +52,7 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="w-80">
                 <div className="flex flex-col space-y-4 mt-6">
-                  <Link href="/" className="flex items-center mb-6">
+                  <Link href={homeUrl} className="flex items-center mb-6">
                     <FileText className="w-6 h-6 text-red-500 mr-2" />
                     <span className="text-lg font-bold text-slate-800">PDF Tools</span>
                   </Link>
