@@ -7,12 +7,12 @@ export default function Footer() {
   const homeUrl = localizeUrl('/', currentLang);
   
   const toolLinks = [
-    { href: localizeUrl("/merge-pdf", currentLang), label: "Merge PDF" },
-    { href: localizeUrl("/split-pdf", currentLang), label: "Split PDF" },
-    { href: localizeUrl("/compress-pdf", currentLang), label: "Compress PDF" },
-    { href: localizeUrl("/pdf-to-word", currentLang), label: "PDF to Word" },
-    { href: localizeUrl("/word-to-pdf", currentLang), label: "Word to PDF" },
-    { href: localizeUrl("/pdf-to-jpg", currentLang), label: "PDF to JPG" },
+    { href: currentLang === 'en' ? "/merge-pdf" : `/${currentLang}/merge-pdf`, label: "Merge PDF" },
+    { href: currentLang === 'en' ? "/split-pdf" : `/${currentLang}/split-pdf`, label: "Split PDF" },
+    { href: currentLang === 'en' ? "/compress-pdf" : `/${currentLang}/compress-pdf`, label: "Compress PDF" },
+    { href: currentLang === 'en' ? "/pdf-to-word" : `/${currentLang}/pdf-to-word`, label: "PDF to Word" },
+    { href: currentLang === 'en' ? "/word-to-pdf" : `/${currentLang}/word-to-pdf`, label: "Word to PDF" },
+    { href: currentLang === 'en' ? "/pdf-to-jpg" : `/${currentLang}/pdf-to-jpg`, label: "PDF to JPG" },
   ];
 
   const supportLinks = [
