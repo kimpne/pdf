@@ -20,6 +20,7 @@ import TermsOfService from "@/pages/terms-of-service";
 import CookiePolicy from "@/pages/cookie-policy";
 import Security from "@/pages/security";
 import About from "@/pages/about";
+import Blog from "@/pages/blog";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
@@ -46,6 +47,7 @@ function Router() {
           <Route path="/cookie-policy" component={CookiePolicy} />
           <Route path="/security" component={Security} />
           <Route path="/about" component={About} />
+          <Route path="/blog" component={Blog} />
           {/* Legacy redirect for old lp-center path */}
           <Route path="/lp-center" component={HelpCenter} />
           
@@ -66,6 +68,7 @@ function Router() {
           <Route path="/es/cookie-policy" component={CookiePolicy} />
           <Route path="/es/security" component={Security} />
           <Route path="/es/about" component={About} />
+          <Route path="/es/blog" component={Blog} />
           <Route path="/es/lp-center" component={HelpCenter} />
           
           {/* French routes */}
@@ -77,6 +80,7 @@ function Router() {
           <Route path="/fr/word-to-pdf" component={WordToPDF} />
           <Route path="/fr/pdf-to-jpg" component={PDFToJPG} />
           <Route path="/fr/help-center" component={HelpCenter} />
+          <Route path="/fr/blog" component={Blog} />
           
           {/* German routes */}
           <Route path="/de" component={Home} />
@@ -87,6 +91,7 @@ function Router() {
           <Route path="/de/word-to-pdf" component={WordToPDF} />
           <Route path="/de/pdf-to-jpg" component={PDFToJPG} />
           <Route path="/de/help-center" component={HelpCenter} />
+          <Route path="/de/blog" component={Blog} />
           
           {/* Korean routes */}
           <Route path="/ko" component={Home} />
@@ -98,6 +103,7 @@ function Router() {
           <Route path="/ko/pdf-to-jpg" component={PDFToJPG} />
           <Route path="/ko/help-center" component={HelpCenter} />
           <Route path="/ko/faq" component={FAQ} />
+          <Route path="/ko/blog" component={Blog} />
           <Route path="/ko/api-docs" component={APIDocs} />
           <Route path="/ko/status" component={Status} />
           <Route path="/ko/privacy-policy" component={PrivacyPolicy} />
