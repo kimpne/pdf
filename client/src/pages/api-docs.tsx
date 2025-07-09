@@ -666,10 +666,10 @@ export default function APIDocs() {
                   <h4 className="font-semibold mb-2">Contact Information</h4>
                   <ul className="space-y-2">
                     <li>
-                      <strong>Technical Support:</strong> support@pdftools.com
+                      <strong>Technical Support:</strong> support@pdfo.dev
                     </li>
                     <li>
-                      <strong>Sales Inquiries:</strong> sales@pdftools.com
+                      <strong>Sales Inquiries:</strong> support@pdfo.dev
                     </li>
                     <li>
                       <strong>Response Time:</strong> Within 24 hours

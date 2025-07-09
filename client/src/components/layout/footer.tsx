@@ -19,7 +19,7 @@ export default function Footer() {
     { href: currentLang === 'en' ? "/faq" : `/${currentLang}/faq`, label: "FAQ" },
     { href: currentLang === 'en' ? "/api-docs" : `/${currentLang}/api-docs`, label: "API" },
     { href: currentLang === 'en' ? "/status" : `/${currentLang}/status`, label: "Status" },
-    { href: homeUrl, label: "Contact Us" },
+    { href: "mailto:support@pdfo.dev", label: "Contact Us" },
   ];
 
   const legalLinks = [

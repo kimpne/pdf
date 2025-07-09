@@ -408,7 +408,7 @@ export default function Status() {
                   <h4 className="font-semibold mb-3">Report Technical Issues</h4>
                   <ul className="space-y-2 text-sm">
                     <li>
-                      <strong>Email:</strong> support@pdftools.com
+                      <strong>Email:</strong> support@pdfo.dev
                     </li>
                     <li>
                       <strong>Response Time:</strong> Within 2 hours during business hours
