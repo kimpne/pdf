@@ -26,7 +26,7 @@ export default function Footer() {
     { href: currentLang === 'en' ? "/privacy-policy" : `/${currentLang}/privacy-policy`, label: "Privacy Policy" },
     { href: currentLang === 'en' ? "/terms-of-service" : `/${currentLang}/terms-of-service`, label: "Terms of Service" },
     { href: currentLang === 'en' ? "/cookie-policy" : `/${currentLang}/cookie-policy`, label: "Cookie Policy" },
-    { href: homeUrl, label: "Security" },
+    { href: currentLang === 'en' ? "/security" : `/${currentLang}/security`, label: "Security" },
   ];
 
   return (

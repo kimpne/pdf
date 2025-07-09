@@ -18,6 +18,7 @@ import Status from "@/pages/status";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import TermsOfService from "@/pages/terms-of-service";
 import CookiePolicy from "@/pages/cookie-policy";
+import Security from "@/pages/security";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
@@ -42,6 +43,7 @@ function Router() {
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/terms-of-service" component={TermsOfService} />
           <Route path="/cookie-policy" component={CookiePolicy} />
+          <Route path="/security" component={Security} />
           {/* Legacy redirect for old lp-center path */}
           <Route path="/lp-center" component={HelpCenter} />
           
@@ -60,6 +62,7 @@ function Router() {
           <Route path="/es/privacy-policy" component={PrivacyPolicy} />
           <Route path="/es/terms-of-service" component={TermsOfService} />
           <Route path="/es/cookie-policy" component={CookiePolicy} />
+          <Route path="/es/security" component={Security} />
           <Route path="/es/lp-center" component={HelpCenter} />
           
           {/* French routes */}
@@ -97,6 +100,7 @@ function Router() {
           <Route path="/ko/privacy-policy" component={PrivacyPolicy} />
           <Route path="/ko/terms-of-service" component={TermsOfService} />
           <Route path="/ko/cookie-policy" component={CookiePolicy} />
+          <Route path="/ko/security" component={Security} />
           <Route path="/ko/lp-center" component={HelpCenter} />
           
           {/* Japanese routes */}
