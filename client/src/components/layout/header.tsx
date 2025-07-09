@@ -5,12 +5,46 @@ import { Menu, FileText } from "lucide-react";
 import { getCurrentLanguage, localizeUrl } from "@/lib/i18n";
 
 export default function Header() {
-  const [location] = useLocation();
+  const [location, navigate] = useLocation();
   const currentLang = getCurrentLanguage();
   const homeUrl = localizeUrl('/', currentLang);
 
-  const navItems = [
-    { href: "#tools", label: "Tools" },
+  // 홈페이지인지 확인하는 함수
+  const isHomePage = () => {
+    const path = location.replace(/^\/[a-z]{2}\//, '/'); // 언어 코드 제거
+    return path === '/' || path === '';
+  };
+
+  // Tools 링크 클릭 핸들러
+  const handleToolsClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (isHomePage()) {
+      // 홈페이지에서는 tools 섹션으로 스크롤
+      const toolsSection = document.getElementById('tools');
+      if (toolsSection) {
+        toolsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // 다른 페이지에서는 홈페이지로 이동 후 tools 섹션으로 스크롤
+      navigate(homeUrl);
+      // 페이지 로드 후 스크롤하기 위해 setTimeout 사용
+      setTimeout(() => {
+        const toolsSection = document.getElementById('tools');
+        if (toolsSection) {
+          toolsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
+  type NavItem = {
+    href: string;
+    label: string;
+    onClick?: (e: React.MouseEvent) => void;
+  };
+
+  const navItems: NavItem[] = [
+    { href: "#tools", label: "Tools", onClick: handleToolsClick },
     { href: currentLang === 'en' ? "/blog" : `/${currentLang}/blog`, label: "Blog" },
     { href: currentLang === 'en' ? "/help-center" : `/${currentLang}/help-center`, label: "Help" },
     { href: currentLang === 'en' ? "/about" : `/${currentLang}/about`, label: "About" },
@@ -29,14 +63,14 @@ export default function Header() {
           
           <nav className="hidden md:flex space-x-6 lg:space-x-8">
             {navItems.map((item) => (
-              item.href.startsWith('#') ? (
-                <a
+              item.onClick ? (
+                <button
                   key={item.href}
-                  href={item.href}
-                  className="text-slate-600 hover:text-primary transition-colors text-sm lg:text-base"
+                  onClick={item.onClick}
+                  className="text-slate-600 hover:text-primary transition-colors text-sm lg:text-base cursor-pointer"
                 >
                   {item.label}
-                </a>
+                </button>
               ) : (
                 <Link
                   key={item.href}
@@ -68,14 +102,14 @@ export default function Header() {
                   </Link>
                   
                   {navItems.map((item) => (
-                    item.href.startsWith('#') ? (
-                      <a
+                    item.onClick ? (
+                      <button
                         key={item.href}
-                        href={item.href}
-                        className="text-slate-600 hover:text-primary transition-colors py-3 text-base border-b border-slate-100 last:border-b-0"
+                        onClick={item.onClick}
+                        className="text-slate-600 hover:text-primary transition-colors py-3 text-base border-b border-slate-100 last:border-b-0 text-left w-full cursor-pointer"
                       >
                         {item.label}
-                      </a>
+                      </button>
                     ) : (
                       <Link
                         key={item.href}
