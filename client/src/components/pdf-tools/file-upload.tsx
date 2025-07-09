@@ -48,12 +48,32 @@ export default function FileUpload({
     onFilesSelect(newFiles);
   }, [selectedFiles, multiple, maxFiles, maxSize, accept, onFilesSelect]);
 
+  // MIME 타입 매핑
+  const getMimeTypes = (acceptString: string) => {
+    const mimeMap: Record<string, string[]> = {
+      '.pdf': ['application/pdf'],
+      '.doc': ['application/msword'],
+      '.docx': ['application/vnd.openxmlformats-officedocument.wordprocessingml.document'],
+      '.jpg': ['image/jpeg'],
+      '.jpeg': ['image/jpeg'],
+      '.png': ['image/png']
+    };
+    
+    const result: Record<string, string[]> = {};
+    acceptString.split(',').forEach(ext => {
+      const trimmed = ext.trim();
+      if (mimeMap[trimmed]) {
+        mimeMap[trimmed].forEach(mime => {
+          result[mime] = [];
+        });
+      }
+    });
+    return result;
+  };
+
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    accept: accept.split(',').reduce((acc, ext) => {
-      acc[ext.trim()] = [];
-      return acc;
-    }, {} as Record<string, string[]>),
+    accept: getMimeTypes(accept),
     multiple,
     maxFiles,
     maxSize,
