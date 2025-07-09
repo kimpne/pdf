@@ -12,7 +12,7 @@ export default function Header() {
   const navItems = [
     { href: "#tools", label: "Tools" },
     { href: "#features", label: "Features" },
-    { href: "#pricing", label: "Pricing" },
+    { href: currentLang === 'en' ? "/help-center" : `/${currentLang}/help-center`, label: "Help" },
     { href: currentLang === 'en' ? "/about" : `/${currentLang}/about`, label: "About" },
   ];
 
