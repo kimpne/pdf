@@ -57,18 +57,27 @@ Allow: /
 # Allow Google AdSense crawlers
 User-agent: Mediapartners-Google
 Allow: /
+Crawl-delay: 0
 
 User-agent: AdsBot-Google
 Allow: /
+Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /
+Crawl-delay: 0
 
 User-agent: Googlebot-News
 Allow: /
+Crawl-delay: 0
 
 User-agent: Googlebot-Video
 Allow: /
+Crawl-delay: 0
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+Crawl-delay: 0
 
 # Block problematic or aggressive crawlers
 User-agent: AhrefsBot

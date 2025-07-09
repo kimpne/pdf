@@ -283,6 +283,9 @@ export function generateMetaTags(seoData: SEOTemplate): string {
     <meta name="google-adsense-account" content="ca-pub-3472753117675617" />
     <meta name="google-site-verification" content="ca-pub-3472753117675617" />
     
+    <!-- AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3472753117675617" crossorigin="anonymous"></script>
+    
     <title>${seoData.title}</title>
     <meta name="description" content="${seoData.description}" />
     <meta name="keywords" content="${seoData.keywords}" />
