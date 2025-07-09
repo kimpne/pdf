@@ -169,6 +169,122 @@ const BLOG_POSTS: Record<string, {
   readTime: string;
   keywords: string;
 }> = {
+  'how-to-merge-pdf-files-online': {
+    title: 'How to Merge PDF Files Online - Complete Guide for 2024',
+    description: 'Learn how to merge PDF files online safely and efficiently. Step-by-step guide with security tips and best practices for combining multiple PDFs.',
+    content: `How to Merge PDF Files Online - Complete Guide
+
+Merging PDF files is a common task for professionals, students, and businesses. Whether you need to combine reports, merge invoices, or consolidate documents, this comprehensive guide will show you how to merge PDF files online safely and efficiently.
+
+## Why Merge PDF Files?
+
+### Common Use Cases
+- **Business Reports**: Combine multiple department reports into one comprehensive document
+- **Academic Papers**: Merge research papers, citations, and appendices
+- **Legal Documents**: Consolidate contracts, agreements, and supporting documents
+- **Marketing Materials**: Combine brochures, presentations, and proposals
+- **Personal Documents**: Merge scanned documents, receipts, and certificates
+
+### Benefits of Online PDF Merging
+- **No Software Installation**: Work directly in your web browser
+- **Cross-Platform Compatibility**: Works on Windows, Mac, Linux, and mobile devices
+- **Instant Processing**: Fast merging without waiting for downloads
+- **Cost-Effective**: Many free tools available online
+- **Always Updated**: No need to update software manually
+
+## Step-by-Step Guide to Merge PDFs Online
+
+### 1. Choose a Reliable PDF Merger Tool
+Select a reputable online service that offers:
+- **SSL Encryption**: Secure file transmission
+- **File Deletion**: Automatic removal of uploaded files
+- **No Registration**: Tools that don't require account creation
+- **Multiple Formats**: Support for various PDF versions
+
+### 2. Upload Your PDF Files
+1. Click "Choose Files" or drag and drop your PDFs
+2. Select multiple files by holding Ctrl (Windows) or Cmd (Mac)
+3. Verify all files are uploaded correctly
+4. Check file sizes and ensure they're within limits
+
+### 3. Arrange Files in Order
+- **Drag and Drop**: Reorder files by dragging them
+- **Preview**: Use preview feature to verify content
+- **Remove Files**: Delete incorrect uploads before merging
+- **Add More**: Upload additional files if needed
+
+### 4. Configure Merge Settings
+- **Page Selection**: Choose specific pages from each PDF
+- **Bookmarks**: Preserve or remove existing bookmarks
+- **Metadata**: Include or exclude document properties
+- **Compression**: Optimize file size if needed
+
+### 5. Start the Merging Process
+1. Click "Merge PDFs" or similar button
+2. Wait for processing to complete
+3. Download the merged PDF immediately
+4. Verify the merged document is correct
+
+## Security Best Practices
+
+### Protecting Your Documents
+1. **Use HTTPS Sites**: Ensure URLs start with "https://"
+2. **Check Privacy Policy**: Verify how files are handled
+3. **Private Browsing**: Use incognito mode for sensitive documents
+4. **VPN Usage**: Consider using a VPN for extra security
+5. **Clear Browser Data**: Clear downloads and cache after use
+
+## Advanced Merging Techniques
+
+### Page-Level Merging
+- **Selective Pages**: Choose specific pages from each PDF
+- **Custom Ranges**: Merge page ranges (e.g., pages 1-5, 10-15)
+- **Alternating Pages**: Interleave pages from different documents
+- **Bookmarks**: Preserve or create new bookmarks in merged document
+
+### Quality Optimization
+- **Compression Settings**: Balance file size and quality
+- **Resolution Control**: Maintain image quality in merged documents
+- **Font Embedding**: Ensure fonts display correctly
+- **Color Profiles**: Preserve color accuracy
+
+## Troubleshooting Common Issues
+
+### File Upload Problems
+- **Large Files**: Use tools that support larger file sizes
+- **Corrupted PDFs**: Repair damaged files before merging
+- **Password Protection**: Remove passwords before uploading
+- **Unsupported Formats**: Ensure all files are valid PDFs
+
+### Merging Errors
+- **Memory Limits**: Break large merges into smaller batches
+- **Compatibility Issues**: Use updated PDF versions
+- **Network Timeouts**: Use stable internet connections
+- **Processing Limits**: Respect tool limitations
+
+## Free vs. Premium Tools
+
+### Free Tools Limitations
+- **File Size Limits**: Usually 10-100MB per file
+- **Daily Limits**: Limited number of merges per day
+- **Watermarks**: Some tools add watermarks to merged files
+- **Basic Features**: Limited customization options
+
+### Premium Features
+- **Unlimited Processing**: No file size or quantity limits
+- **Advanced Options**: Custom page ranges, bookmarks, security settings
+- **Batch Processing**: Merge multiple document sets simultaneously
+- **Priority Support**: Faster processing and customer support
+
+## Conclusion
+
+Merging PDF files online is a convenient and efficient way to combine documents for various purposes. By following security best practices and choosing reliable tools, you can safely merge your PDFs while maintaining document quality and protecting your privacy.
+
+For the most secure and efficient PDF merging experience, try PDFo.dev - your trusted source for free, secure PDF tools.`,
+    publishDate: '2024-01-20',
+    readTime: '10 min read',
+    keywords: 'merge PDF online, combine PDF files, PDF merger tool, merge documents, PDF combiner'
+  },
   'how-to-convert-pdf-to-word-safely': {
     title: 'How to Convert PDF to Word Safely - Complete Security Guide',
     description: 'Learn how to convert PDF to Word documents safely with our comprehensive security guide. Protect your sensitive data during PDF to Word conversion.',
@@ -232,6 +348,124 @@ Learn more about secure PDF conversion at PDFo.dev - your trusted source for fre
     publishDate: '2024-01-15',
     readTime: '8 min read',
     keywords: 'PDF to Word security, secure PDF conversion, protect PDF data, safe file conversion, PDF privacy'
+  },
+  'how-to-merge-pdf-files-online': {
+    title: 'How to Merge PDF Files Online - Complete Guide for 2024',
+    description: 'Learn how to merge PDF files online safely and efficiently. Step-by-step guide with security tips and best practices for combining multiple PDFs.',
+    content: `How to Merge PDF Files Online - Complete Guide
+
+Merging PDF files is a common task for professionals, students, and businesses. Whether you need to combine reports, merge invoices, or consolidate documents, this comprehensive guide will show you how to merge PDF files online safely and efficiently.
+
+## Why Merge PDF Files?
+
+### Common Use Cases
+- **Business Reports**: Combine multiple department reports into one comprehensive document
+- **Academic Papers**: Merge research papers, citations, and appendices
+- **Legal Documents**: Consolidate contracts, agreements, and supporting documents
+- **Marketing Materials**: Combine brochures, presentations, and proposals
+- **Personal Documents**: Merge scanned documents, receipts, and certificates
+
+### Benefits of Online PDF Merging
+- **No Software Installation**: Work directly in your web browser
+- **Cross-Platform Compatibility**: Works on Windows, Mac, Linux, and mobile devices
+- **Instant Processing**: Fast merging without waiting for downloads
+- **Cost-Effective**: Free tools available for basic merging needs
+- **Accessibility**: Access from any device with internet connection
+
+## Step-by-Step Guide to Merge PDFs Online
+
+### 1. Choose a Reliable PDF Merger Tool
+When selecting an online PDF merger, consider:
+- **Security Features**: Look for SSL encryption and automatic file deletion
+- **File Size Limits**: Ensure it supports your document sizes
+- **Quality Preservation**: Maintains original document quality
+- **User Interface**: Easy-to-use drag-and-drop functionality
+- **Privacy Policy**: Clear data handling practices
+
+### 2. Upload Your PDF Files
+1. **Select Files**: Click "Choose Files" or drag and drop your PDFs
+2. **Multiple Selection**: Hold Ctrl (Windows) or Cmd (Mac) to select multiple files
+3. **File Order**: Arrange files in the desired order for merging
+4. **Preview**: Check file thumbnails to ensure correct selection
+
+### 3. Arrange and Organize
+- **Drag and Drop**: Reorder files by dragging them to the desired position
+- **Remove Files**: Delete unwanted files before merging
+- **Page Selection**: Some tools allow selecting specific pages from each PDF
+- **Preview Mode**: Review the arrangement before processing
+
+### 4. Merge and Download
+1. **Click Merge**: Start the merging process
+2. **Processing Time**: Wait for the tool to combine your files
+3. **Download Link**: Get the download link for your merged PDF
+4. **Save Locally**: Save the merged file to your device
+
+## Security Considerations
+
+### Protecting Your Documents
+- **Use HTTPS**: Ensure the website uses secure connections
+- **File Deletion**: Choose tools that automatically delete files after processing
+- **Privacy Policy**: Read and understand data handling practices
+- **Sensitive Data**: Avoid uploading confidential documents to unknown services
+- **Local Processing**: Consider offline tools for highly sensitive documents
+
+### Best Practices for Online Merging
+1. **Backup Originals**: Always keep copies of original files
+2. **Check File Integrity**: Verify merged document completeness
+3. **Scan for Malware**: Use antivirus software on downloaded files
+4. **Secure Networks**: Use trusted internet connections
+5. **Clear Browser Data**: Clear downloads and cache after use
+
+## Advanced Merging Techniques
+
+### Page-Level Merging
+- **Selective Pages**: Choose specific pages from each PDF
+- **Custom Ranges**: Merge page ranges (e.g., pages 1-5, 10-15)
+- **Alternating Pages**: Interleave pages from different documents
+- **Bookmarks**: Preserve or create new bookmarks in merged document
+
+### Quality Optimization
+- **Compression Settings**: Balance file size and quality
+- **Resolution Control**: Maintain image quality in merged documents
+- **Font Embedding**: Ensure fonts display correctly
+- **Color Profiles**: Preserve color accuracy
+
+## Troubleshooting Common Issues
+
+### File Upload Problems
+- **Large Files**: Use tools that support larger file sizes
+- **Corrupted PDFs**: Repair damaged files before merging
+- **Password Protection**: Remove passwords before uploading
+- **Unsupported Formats**: Ensure all files are valid PDFs
+
+### Merging Errors
+- **Memory Limits**: Break large merges into smaller batches
+- **Compatibility Issues**: Use updated PDF versions
+- **Network Timeouts**: Use stable internet connections
+- **Processing Limits**: Respect tool limitations
+
+## Free vs. Premium Tools
+
+### Free Tools Limitations
+- **File Size Limits**: Usually 10-100MB per file
+- **Daily Limits**: Limited number of merges per day
+- **Watermarks**: Some tools add watermarks to merged files
+- **Basic Features**: Limited customization options
+
+### Premium Features
+- **Unlimited Processing**: No file size or quantity limits
+- **Advanced Options**: Custom page ranges, bookmarks, security settings
+- **Batch Processing**: Merge multiple document sets simultaneously
+- **Priority Support**: Faster processing and customer support
+
+## Conclusion
+
+Merging PDF files online is a convenient and efficient way to combine documents for various purposes. By following security best practices and choosing reliable tools, you can safely merge your PDFs while maintaining document quality and protecting your privacy.
+
+For the most secure and efficient PDF merging experience, try PDFo.dev - your trusted source for free, secure PDF tools.`,
+    publishDate: '2024-01-20',
+    readTime: '10 min read',
+    keywords: 'merge PDF online, combine PDF files, PDF merger tool, merge documents, PDF combiner'
   }
 };
 
@@ -331,9 +565,50 @@ export function generateMetaTags(seoData: SEOTemplate): string {
   `;
 }
 
+// 블로그 포스트의 HTML 콘텐츠를 마크다운에서 HTML로 변환하는 간단한 함수
+function convertMarkdownToHTML(markdown: string): string {
+  return markdown
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^\*\*(.+)\*\*:/gm, '<strong>$1</strong>:')
+    .replace(/^\* (.+)$/gm, '<li>$1</li>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/^(\d+\. .+)$/gm, '<li>$1</li>')
+    .replace(/(?:^|\n)(.+)(?=\n|$)/g, '<p>$1</p>')
+    .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+    .replace(/<\/ul>\s*<ul>/g, '')
+    .replace(/<p>(<h[1-6]>.*<\/h[1-6]>)<\/p>/g, '$1')
+    .replace(/<p>(<ul>.*<\/ul>)<\/p>/gs, '$1')
+    .replace(/<p>\s*<\/p>/g, '');
+}
+
 export function generateFullHTML(path: string, content: string = ''): string {
   const seoData = getSEOData(path);
   const metaTags = generateMetaTags(seoData);
+  
+  // 블로그 포스트인 경우 실제 콘텐츠 제공
+  let blogContent = '';
+  if (path.startsWith('/blog/')) {
+    const slug = path.replace('/blog/', '');
+    const post = BLOG_POSTS[slug];
+    if (post) {
+      blogContent = `
+        <article class="blog-post">
+          <header class="blog-header">
+            <h1>${post.title}</h1>
+            <div class="blog-meta">
+              <span class="publish-date">${post.publishDate}</span>
+              <span class="read-time">${post.readTime}</span>
+            </div>
+          </header>
+          <div class="blog-content">
+            ${convertMarkdownToHTML(post.content)}
+          </div>
+        </article>
+      `;
+    }
+  }
   
   return `<!DOCTYPE html>
 <html lang="en">
@@ -414,6 +689,70 @@ export function generateFullHTML(path: string, content: string = ''): string {
       
       section {
         margin-bottom: 48px;
+      }
+      
+      /* 블로그 포스트 스타일 */
+      .blog-post {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 48px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 48px;
+      }
+      
+      .blog-header {
+        margin-bottom: 32px;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 24px;
+      }
+      
+      .blog-header h1 {
+        font-size: 36px;
+        color: #1e293b;
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      
+      .blog-meta {
+        display: flex;
+        gap: 16px;
+        color: #64748b;
+        font-size: 14px;
+      }
+      
+      .blog-content h2 {
+        font-size: 28px;
+        color: #1e293b;
+        margin-top: 32px;
+        margin-bottom: 16px;
+      }
+      
+      .blog-content h3 {
+        font-size: 20px;
+        color: #1e293b;
+        margin-top: 24px;
+        margin-bottom: 12px;
+      }
+      
+      .blog-content p {
+        color: #64748b;
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+      
+      .blog-content ul, .blog-content ol {
+        color: #64748b;
+        padding-left: 20px;
+        margin-bottom: 16px;
+      }
+      
+      .blog-content li {
+        margin-bottom: 8px;
+      }
+      
+      .blog-content strong {
+        color: #1e293b;
+        font-weight: 600;
       }
       
       h2 {
@@ -601,54 +940,56 @@ export function generateFullHTML(path: string, content: string = ''): string {
       </header>
       
       <main>
-        <section>
-          <h2>Free Online PDF Tools</h2>
-          <p>PDFo.dev offers a comprehensive suite of free online PDF tools for all your document processing needs. Our tools are fast, secure, and require no registration.</p>
+        ${blogContent || `
+          <section>
+            <h2>Free Online PDF Tools</h2>
+            <p>PDFo.dev offers a comprehensive suite of free online PDF tools for all your document processing needs. Our tools are fast, secure, and require no registration.</p>
+            
+            <div class="tools-grid">
+              <div class="tool-card">
+                <h3><a href="/merge-pdf">Merge PDF Files</a></h3>
+                <p>Combine multiple PDF files into a single document quickly and easily.</p>
+              </div>
+              
+              <div class="tool-card">
+                <h3><a href="/split-pdf">Split PDF Files</a></h3>
+                <p>Extract specific pages or split PDF documents into multiple files.</p>
+              </div>
+              
+              <div class="tool-card">
+                <h3><a href="/compress-pdf">Compress PDF Files</a></h3>
+                <p>Reduce PDF file size while maintaining document quality.</p>
+              </div>
+              
+              <div class="tool-card">
+                <h3><a href="/pdf-to-word">Convert PDF to Word</a></h3>
+                <p>Transform PDF documents into editable Word files (DOC/DOCX).</p>
+              </div>
+              
+              <div class="tool-card">
+                <h3><a href="/word-to-pdf">Convert Word to PDF</a></h3>
+                <p>Create PDF documents from Word files with perfect formatting.</p>
+              </div>
+              
+              <div class="tool-card">
+                <h3><a href="/pdf-to-jpg">Convert PDF to Images</a></h3>
+                <p>Extract PDF pages as high-quality JPG images.</p>
+              </div>
+            </div>
+          </section>
           
-          <div class="tools-grid">
-            <div class="tool-card">
-              <h3><a href="/merge-pdf">Merge PDF Files</a></h3>
-              <p>Combine multiple PDF files into a single document quickly and easily.</p>
-            </div>
-            
-            <div class="tool-card">
-              <h3><a href="/split-pdf">Split PDF Files</a></h3>
-              <p>Extract specific pages or split PDF documents into multiple files.</p>
-            </div>
-            
-            <div class="tool-card">
-              <h3><a href="/compress-pdf">Compress PDF Files</a></h3>
-              <p>Reduce PDF file size while maintaining document quality.</p>
-            </div>
-            
-            <div class="tool-card">
-              <h3><a href="/pdf-to-word">Convert PDF to Word</a></h3>
-              <p>Transform PDF documents into editable Word files (DOC/DOCX).</p>
-            </div>
-            
-            <div class="tool-card">
-              <h3><a href="/word-to-pdf">Convert Word to PDF</a></h3>
-              <p>Create PDF documents from Word files with perfect formatting.</p>
-            </div>
-            
-            <div class="tool-card">
-              <h3><a href="/pdf-to-jpg">Convert PDF to Images</a></h3>
-              <p>Extract PDF pages as high-quality JPG images.</p>
-            </div>
-          </div>
-        </section>
-        
-        <section>
-          <h2>Why Choose PDFo.dev?</h2>
-          <ul>
-            <li><strong>100% Free:</strong> All tools are completely free to use with no hidden fees</li>
-            <li><strong>Secure:</strong> Files are processed securely and deleted after 1 hour</li>
-            <li><strong>Fast:</strong> Lightning-fast processing with cloud infrastructure</li>
-            <li><strong>No Registration:</strong> Start using tools immediately without signing up</li>
-            <li><strong>Browser-Based:</strong> Works on any device with a web browser</li>
-            <li><strong>High Quality:</strong> Maintain original document quality during processing</li>
-          </ul>
-        </section>
+          <section>
+            <h2>Why Choose PDFo.dev?</h2>
+            <ul>
+              <li><strong>100% Free:</strong> All tools are completely free to use with no hidden fees</li>
+              <li><strong>Secure:</strong> Files are processed securely and deleted after 1 hour</li>
+              <li><strong>Fast:</strong> Lightning-fast processing with cloud infrastructure</li>
+              <li><strong>No Registration:</strong> Start using tools immediately without signing up</li>
+              <li><strong>Browser-Based:</strong> Works on any device with a web browser</li>
+              <li><strong>High Quality:</strong> Maintain original document quality during processing</li>
+            </ul>
+          </section>
+        `}
       </main>
       
       <footer>
