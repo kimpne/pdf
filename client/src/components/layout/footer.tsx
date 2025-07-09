@@ -12,6 +12,7 @@ export default function Footer() {
     { href: localizeUrl("/compress-pdf", currentLang), label: "Compress PDF" },
     { href: localizeUrl("/pdf-to-word", currentLang), label: "PDF to Word" },
     { href: localizeUrl("/word-to-pdf", currentLang), label: "Word to PDF" },
+    { href: localizeUrl("/pdf-to-jpg", currentLang), label: "PDF to JPG" },
   ];
 
   const supportLinks = [
