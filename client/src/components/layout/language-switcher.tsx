@@ -97,6 +97,9 @@ export default function LanguageSwitcher({
                         <div className="font-medium">{language.name}</div>
                         <div className="text-xs text-gray-500">{language.englishName}</div>
                       </div>
+                      <div className="text-xs text-gray-400 font-mono">
+                        {language.code.toUpperCase()}
+                      </div>
                       {isActive && (
                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                       )}
