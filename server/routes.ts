@@ -287,8 +287,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         res.setHeader('Content-Type', 'text/html');
         res.send(seoHtml);
       } else {
-        // 일반 사용자는 기본 React 앱으로 리디렉션
-        res.redirect('/#' + route);
+        // 일반 사용자에게도 기본 HTML 제공 (React 앱이 클라이언트 라우팅 처리)
+        const seoHtml = generateFullHTML(route);
+        res.setHeader('Content-Type', 'text/html');
+        res.send(seoHtml);
       }
     });
   });
