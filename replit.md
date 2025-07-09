@@ -7,6 +7,7 @@ This is a full-stack PDF processing application built with React/TypeScript fron
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Preferred explanation language: Korean for technical explanations.
 
 ## System Architecture
 

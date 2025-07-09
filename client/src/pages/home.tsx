@@ -111,9 +111,11 @@ export default function Home() {
   return (
     <>
       <SEOHead 
-        title="PDF Tools Online - Free PDF Merge, Split, Combine & Convert"
-        description="Free online PDF tools to merge, split, compress, and convert PDF files. Fast, secure, and easy to use PDF editor with no registration required."
-        keywords="merge PDF online, split PDF free, compress PDF, PDF to Word converter, free PDF tools, online PDF editor"
+        title="Free PDF Tools - Merge, Split, Compress & Convert Online | PDF Tools"
+        description="Professional PDF tools online for free. Merge PDFs, split documents, compress files, convert PDF to Word & more. No registration needed. 100% secure & fast processing."
+        keywords="free PDF tools, merge PDF online, split PDF, compress PDF, PDF to Word converter, Word to PDF, PDF to JPG, online PDF editor, free PDF merger, PDF splitter"
+        ogImage="/og-pdf-tools.svg"
+        structuredDataType="SoftwareApplication"
       />
       
       {/* Hero Section */}
