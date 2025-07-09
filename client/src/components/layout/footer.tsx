@@ -66,9 +66,15 @@ export default function Footer() {
             <ul className="space-y-2 text-slate-400 text-sm sm:text-base">
               {supportLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-white transition-colors">
-                    {link.label}
-                  </Link>
+                  {link.href.startsWith('mailto:') ? (
+                    <a href={link.href} className="hover:text-white transition-colors">
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="hover:text-white transition-colors">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
