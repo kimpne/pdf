@@ -15,18 +15,18 @@ export default function Footer() {
   ];
 
   const supportLinks = [
-    { href: "/help", label: "Help Center" },
-    { href: "/contact", label: "Contact Us" },
-    { href: "/faq", label: "FAQ" },
-    { href: "/api", label: "API" },
-    { href: "/status", label: "Status" },
+    { href: homeUrl, label: "Help Center" },
+    { href: homeUrl, label: "Contact Us" },
+    { href: homeUrl, label: "FAQ" },
+    { href: homeUrl, label: "API" },
+    { href: homeUrl, label: "Status" },
   ];
 
   const legalLinks = [
-    { href: "/privacy", label: "Privacy Policy" },
-    { href: "/terms", label: "Terms of Service" },
-    { href: "/cookies", label: "Cookie Policy" },
-    { href: "/security", label: "Security" },
+    { href: homeUrl, label: "Privacy Policy" },
+    { href: homeUrl, label: "Terms of Service" },
+    { href: homeUrl, label: "Cookie Policy" },
+    { href: homeUrl, label: "Security" },
   ];
 
   return (
