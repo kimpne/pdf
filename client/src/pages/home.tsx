@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import FileUpload from "@/components/pdf-tools/file-upload";
 import ToolCard from "@/components/pdf-tools/tool-card";
 import MultiLangSEOHead from "@/components/layout/multi-lang-seo-head";
+import OptimizedHead from "@/components/seo/OptimizedHead";
 import LanguageSwitcher from "@/components/layout/language-switcher";
 import type { ToolMetadata } from "@shared/schema";
 import { getCurrentLanguage } from "@/lib/i18n";
@@ -116,6 +117,14 @@ export default function Home() {
   
   return (
     <>
+      <OptimizedHead 
+        title={translation.seo.title}
+        description={translation.seo.description}
+        keywords={translation.seo.keywords}
+        canonical={`https://pdfo.dev${currentLang === 'en' ? '' : `/${currentLang}`}/`}
+        ogImage="https://pdfo.dev/og-pdf-tools.jpg"
+        ogType="website"
+      />
       <MultiLangSEOHead 
         title={translation.seo.title}
         description={translation.seo.description}
