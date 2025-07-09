@@ -13,6 +13,7 @@ import WordToPDF from "@/pages/word-to-pdf";
 import PDFToJPG from "@/pages/pdf-to-jpg";
 import HelpCenter from "@/pages/help-center";
 import FAQ from "@/pages/faq";
+import APIDocs from "@/pages/api-docs";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
@@ -32,6 +33,7 @@ function Router() {
           <Route path="/pdf-to-jpg" component={PDFToJPG} />
           <Route path="/help-center" component={HelpCenter} />
           <Route path="/faq" component={FAQ} />
+          <Route path="/api-docs" component={APIDocs} />
           {/* Legacy redirect for old lp-center path */}
           <Route path="/lp-center" component={HelpCenter} />
           
@@ -45,6 +47,7 @@ function Router() {
           <Route path="/es/pdf-to-jpg" component={PDFToJPG} />
           <Route path="/es/help-center" component={HelpCenter} />
           <Route path="/es/faq" component={FAQ} />
+          <Route path="/es/api-docs" component={APIDocs} />
           <Route path="/es/lp-center" component={HelpCenter} />
           
           {/* French routes */}
@@ -77,6 +80,7 @@ function Router() {
           <Route path="/ko/pdf-to-jpg" component={PDFToJPG} />
           <Route path="/ko/help-center" component={HelpCenter} />
           <Route path="/ko/faq" component={FAQ} />
+          <Route path="/ko/api-docs" component={APIDocs} />
           <Route path="/ko/lp-center" component={HelpCenter} />
           
           {/* Japanese routes */}

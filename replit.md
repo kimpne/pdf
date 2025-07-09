@@ -76,7 +76,8 @@ Preferred SEO approach: Comprehensive multi-language global SEO targeting intern
 ### Content Pages
 - **Help Center**: `/help-center` - User guides and tutorials for PDF tools
 - **FAQ Page**: `/faq` - Comprehensive frequently asked questions with SEO optimization
-- **Features**: Collapsible sections, category filtering, keyword highlighting
+- **API Documentation**: `/api-docs` - Complete developer documentation for REST API
+- **Features**: Collapsible sections, category filtering, keyword highlighting, code examples
 - **SEO**: Structured data, meta tags, and keyword optimization for search engines
 
 ### UI Components
