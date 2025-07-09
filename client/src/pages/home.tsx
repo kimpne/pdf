@@ -266,7 +266,7 @@ export default function Home() {
             Join millions of users who trust our PDF tools for their daily document needs.
           </p>
           <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-slate-50">
-            Get Started Now
+            Start PDF Editing
           </Button>
         </div>
       </section>

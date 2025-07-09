@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { FileText, Facebook, Twitter, Linkedin } from "lucide-react";
+import { FileText } from "lucide-react";
 import { getCurrentLanguage, localizeUrl } from "@/lib/i18n";
 
 export default function Footer() {
@@ -43,17 +43,6 @@ export default function Footer() {
               The most comprehensive online PDF toolkit. 
               Fast, secure, and free to use.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
           </div>
           
           {/* Tools */}
