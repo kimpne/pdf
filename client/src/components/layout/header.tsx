@@ -13,7 +13,7 @@ export default function Header() {
     { href: "#tools", label: "Tools" },
     { href: "#features", label: "Features" },
     { href: "#pricing", label: "Pricing" },
-    { href: "#about", label: "About" },
+    { href: currentLang === 'en' ? "/about" : `/${currentLang}/about`, label: "About" },
   ];
 
   return (
@@ -29,13 +29,23 @@ export default function Header() {
           
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-slate-600 hover:text-primary transition-colors"
-              >
-                {item.label}
-              </a>
+              item.href.startsWith('#') ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-slate-600 hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-slate-600 hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </nav>
           
@@ -58,13 +68,23 @@ export default function Header() {
                   </Link>
                   
                   {navItems.map((item) => (
-                    <a
-                      key={item.href}
-                      href={item.href}
-                      className="text-slate-600 hover:text-primary transition-colors py-2"
-                    >
-                      {item.label}
-                    </a>
+                    item.href.startsWith('#') ? (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        className="text-slate-600 hover:text-primary transition-colors py-2"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="text-slate-600 hover:text-primary transition-colors py-2"
+                      >
+                        {item.label}
+                      </Link>
+                    )
                   ))}
                   
                   <Button className="mt-6">
