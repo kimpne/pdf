@@ -35,14 +35,14 @@ export default function ToolCard({ tool }: ToolCardProps) {
 
   return (
     <Link href={tool.path}>
-      <Card className="tool-card">
-        <CardContent className="p-6">
+      <Card className="tool-card group">
+        <CardContent className="p-4 sm:p-6">
           <div className="text-center">
             <div className={cn("tool-icon", colorClass)}>
-              <Icon className="w-8 h-8" />
+              <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
-            <h3 className="text-lg font-semibold text-slate-800 mb-2">{tool.name}</h3>
-            <p className="text-sm text-slate-600">{tool.description}</p>
+            <h3 className="text-base sm:text-lg font-semibold text-slate-800 mb-1 sm:mb-2">{tool.name}</h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{tool.description}</p>
           </div>
         </CardContent>
       </Card>

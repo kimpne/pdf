@@ -126,37 +126,37 @@ export default function Home() {
       />
       
       {/* Hero Section */}
-      <section className="gradient-hero py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="gradient-hero py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="text-center">
             {/* Language Switcher */}
-            <div className="flex justify-end mb-8">
+            <div className="flex justify-end mb-6 sm:mb-8">
               <LanguageSwitcher />
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-4 sm:mb-6 px-2">
               {t('hero.title', currentLang)}
             </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-slate-600 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
               {t('hero.subtitle', currentLang)}
             </p>
             
-            <div className="max-w-2xl mx-auto mb-8">
+            <div className="max-w-2xl mx-auto mb-6 sm:mb-8 px-2">
               <FileUpload />
             </div>
             
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
-              <div className="flex items-center gap-2">
-                <i className="fas fa-shield-alt"></i>
-                {t('hero.features.secure', currentLang)}
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-slate-500 px-4">
+              <div className="flex items-center justify-center gap-2">
+                <i className="fas fa-shield-alt text-green-500"></i>
+                <span>{t('hero.features.secure', currentLang)}</span>
               </div>
-              <div className="flex items-center gap-2">
-                <i className="fas fa-clock"></i>
-                Files deleted after 1 hour
+              <div className="flex items-center justify-center gap-2">
+                <i className="fas fa-clock text-blue-500"></i>
+                <span>Files deleted after 1 hour</span>
               </div>
-              <div className="flex items-center gap-2">
-                <i className="fas fa-globe"></i>
-                Works on any device
+              <div className="flex items-center justify-center gap-2">
+                <i className="fas fa-globe text-purple-500"></i>
+                <span>Works on any device</span>
               </div>
             </div>
           </div>
@@ -164,19 +164,19 @@ export default function Home() {
       </section>
 
       {/* PDF Tools Grid */}
-      <section id="tools" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+      <section id="tools" className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-3 sm:mb-4 px-2">
               All-in-one PDF Tools
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto px-4">
               Professional PDF tools to help you work more efficiently. 
               All tools are free and work directly in your browser.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {tools.map((tool) => (
               <ToolCard key={tool.id} tool={tool} />
             ))}
@@ -185,25 +185,25 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+      <section id="features" className="py-12 sm:py-16 lg:py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-3 sm:mb-4 px-2">
               Why Choose Our PDF Tools?
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto px-4">
               Fast, secure, and reliable PDF processing with industry-leading technology.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="feature-card">
                 <div className="feature-icon">
-                  <i className={`fas fa-${feature.icon} text-3xl text-primary`}></i>
+                  <i className={`fas fa-${feature.icon} text-2xl sm:text-3xl text-primary`}></i>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">{feature.title}</h3>
-                <p className="text-slate-600">{feature.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-800 mb-2 sm:mb-3">{feature.title}</h3>
+                <p className="text-sm sm:text-base text-slate-600">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -211,44 +211,44 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-3 sm:mb-4 px-2">
               How It Works
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto px-4">
               Simple 3-step process to get your PDF tasks done in minutes.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="step-number">
-                <span className="text-2xl font-bold text-white">1</span>
+                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-white">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-slate-800 mb-3">Upload Files</h3>
-              <p className="text-slate-600">
+              <h3 className="text-lg sm:text-xl font-semibold text-slate-800 mb-2 sm:mb-3 px-2">Upload Files</h3>
+              <p className="text-sm sm:text-base text-slate-600 px-4">
                 Drag and drop your PDF files or click to browse and select from your device.
               </p>
             </div>
             
             <div className="text-center">
               <div className="step-number">
-                <span className="text-2xl font-bold text-white">2</span>
+                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-white">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-slate-800 mb-3">Process</h3>
-              <p className="text-slate-600">
+              <h3 className="text-lg sm:text-xl font-semibold text-slate-800 mb-2 sm:mb-3 px-2">Process</h3>
+              <p className="text-sm sm:text-base text-slate-600 px-4">
                 Our powerful servers process your files instantly using advanced algorithms.
               </p>
             </div>
             
             <div className="text-center">
               <div className="step-number">
-                <span className="text-2xl font-bold text-white">3</span>
+                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-white">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-slate-800 mb-3">Download</h3>
-              <p className="text-slate-600">
+              <h3 className="text-lg sm:text-xl font-semibold text-slate-800 mb-2 sm:mb-3 px-2">Download</h3>
+              <p className="text-sm sm:text-base text-slate-600 px-4">
                 Download your processed files immediately. Files are deleted after 1 hour.
               </p>
             </div>
@@ -257,15 +257,15 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-primary text-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 px-2">
             Ready to streamline your PDF workflow?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
             Join millions of users who trust our PDF tools for their daily document needs.
           </p>
-          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-slate-50">
+          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-slate-50 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
             Start PDF Editing
           </Button>
         </div>

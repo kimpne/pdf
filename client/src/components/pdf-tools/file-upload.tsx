@@ -96,7 +96,7 @@ export default function FileUpload({
   return (
     <div className="space-y-4">
       <Card>
-        <CardContent className="p-6">
+        <CardContent className="p-3 sm:p-6">
           <div
             {...getRootProps()}
             className={cn(
@@ -107,19 +107,19 @@ export default function FileUpload({
           >
             <input {...getInputProps()} />
             <div className="text-center">
-              <Upload className="w-12 h-12 text-primary mx-auto mb-4" />
-              <p className="text-lg font-semibold text-slate-700 mb-2">
+              <Upload className="w-8 h-8 sm:w-12 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />
+              <p className="text-base sm:text-lg font-semibold text-slate-700 mb-2">
                 {isDragActive ? "Drop your files here" : "Drop your PDF here"}
               </p>
-              <p className="text-slate-500 mb-4">or click to browse files</p>
-              <Button type="button" variant="outline">
+              <p className="text-sm sm:text-base text-slate-500 mb-3 sm:mb-4">or click to browse files</p>
+              <Button type="button" variant="outline" size="sm" className="text-sm sm:text-base">
                 Select {accept.toUpperCase()} Files
               </Button>
             </div>
           </div>
           
           {error && (
-            <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+            <div className="mt-3 sm:mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
               <p className="text-red-700 text-sm">{error}</p>
             </div>
           )}
@@ -128,23 +128,23 @@ export default function FileUpload({
 
       {selectedFiles.length > 0 && (
         <Card>
-          <CardContent className="p-6">
-            <h3 className="text-lg font-semibold mb-4">Selected Files</h3>
-            <div className="space-y-3">
+          <CardContent className="p-3 sm:p-6">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Selected Files</h3>
+            <div className="space-y-2 sm:space-y-3">
               {selectedFiles.map((file, index) => (
-                <div key={index} className="flex items-center p-3 bg-slate-50 rounded-lg">
-                  <FileText className="w-5 h-5 text-red-500 mr-3" />
-                  <div className="flex-1">
-                    <p className="font-medium text-sm">{file.name}</p>
+                <div key={index} className="flex items-center p-2 sm:p-3 bg-slate-50 rounded-lg">
+                  <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 mr-2 sm:mr-3 flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="font-medium text-sm truncate">{file.name}</p>
                     <p className="text-xs text-slate-500">{formatFileSize(file.size)}</p>
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => removeFile(index)}
-                    className="text-red-500 hover:text-red-700"
+                    className="text-red-500 hover:text-red-700 ml-2 p-1 h-auto"
                   >
-                    <X className="w-4 h-4" />
+                    <X className="w-3 h-3 sm:w-4 sm:h-4" />
                   </Button>
                 </div>
               ))}

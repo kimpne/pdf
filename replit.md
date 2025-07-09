@@ -23,6 +23,7 @@ Preferred SEO approach: Comprehensive multi-language global SEO targeting intern
 - **Internationalization**: Custom i18n system with 12+ language support
 - **SEO**: Multi-language SEO optimization with hreflang tags
 - **Content Pages**: Help Center and FAQ pages with SEO optimization
+- **Mobile Optimization**: Responsive design with touch-friendly interface
 
 ### Backend Architecture
 - **Runtime**: Node.js with Express.js framework
@@ -91,6 +92,8 @@ Preferred SEO approach: Comprehensive multi-language global SEO targeting intern
 - **Component Library**: Comprehensive set of reusable components
 - **Accessibility**: ARIA-compliant components from Radix UI
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Mobile Optimization**: Touch-friendly buttons, optimized spacing, and responsive typography
+- **Progressive Enhancement**: Smaller screens receive optimized layouts and interactions
 
 ## Data Flow
 

@@ -30,16 +30,16 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-slate-800 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-slate-800 text-white py-8 sm:py-12">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <Link href={homeUrl} className="flex items-center mb-4 hover:opacity-80 transition-opacity">
-              <FileText className="w-6 h-6 text-red-500 mr-2" />
-              <span className="text-xl font-bold">PDF Tools</span>
+              <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-red-500 mr-2" />
+              <span className="text-lg sm:text-xl font-bold">PDF Tools</span>
             </Link>
-            <p className="text-slate-400 mb-4">
+            <p className="text-slate-400 mb-4 text-sm sm:text-base">
               The most comprehensive online PDF toolkit. 
               Fast, secure, and free to use.
             </p>
@@ -47,8 +47,8 @@ export default function Footer() {
           
           {/* Tools */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">PDF Tools</h3>
-            <ul className="space-y-2 text-slate-400">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">PDF Tools</h3>
+            <ul className="space-y-2 text-slate-400 text-sm sm:text-base">
               {toolLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-white transition-colors">
@@ -61,8 +61,8 @@ export default function Footer() {
           
           {/* Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-2 text-slate-400">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Support</h3>
+            <ul className="space-y-2 text-slate-400 text-sm sm:text-base">
               {supportLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-white transition-colors">
@@ -75,8 +75,8 @@ export default function Footer() {
           
           {/* Legal */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2 text-slate-400">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Legal</h3>
+            <ul className="space-y-2 text-slate-400 text-sm sm:text-base">
               {legalLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-white transition-colors">
@@ -88,8 +88,8 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
-          <p>&copy; 2024 PDF Tools. All rights reserved.</p>
+        <div className="border-t border-slate-700 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-slate-400">
+          <p className="text-sm sm:text-base">&copy; 2024 PDF Tools. All rights reserved.</p>
         </div>
       </div>
     </footer>

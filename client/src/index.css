@@ -86,7 +86,7 @@
   }
 
   .tool-card {
-    @apply bg-white rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-all duration-200 cursor-pointer;
+    @apply bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-border hover:shadow-md transition-all duration-200 cursor-pointer;
   }
   
   .tool-card:hover {
@@ -94,11 +94,11 @@
   }
 
   .tool-icon {
-    @apply w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-200;
+    @apply w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-colors duration-200;
   }
 
   .upload-area {
-    @apply border-2 border-dashed rounded-xl p-8 bg-white transition-all duration-200 cursor-pointer;
+    @apply border-2 border-dashed rounded-xl p-4 sm:p-8 bg-white transition-all duration-200 cursor-pointer;
     border-color: hsl(var(--primary) / 0.3);
   }
   
@@ -112,20 +112,20 @@
   }
 
   .feature-card {
-    @apply text-center p-6;
+    @apply text-center p-4 sm:p-6;
   }
 
   .feature-icon {
-    @apply w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6;
+    @apply w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6;
     background-color: hsl(var(--primary) / 0.1);
   }
 
   .step-number {
-    @apply w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6;
+    @apply w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6;
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+    @apply bg-primary text-primary-foreground px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-medium transition-colors duration-200;
   }
   
   .btn-primary:hover {
@@ -133,16 +133,131 @@
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+    @apply bg-secondary text-secondary-foreground px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-medium transition-colors duration-200;
   }
   
   .btn-secondary:hover {
     background-color: hsl(var(--secondary) / 0.8);
+  }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    .mobile-optimized {
+      @apply text-sm;
+    }
+    
+    .mobile-padding {
+      @apply px-3 py-2;
+    }
+    
+    .mobile-text-lg {
+      @apply text-base;
+    }
+    
+    .mobile-text-xl {
+      @apply text-lg;
+    }
+    
+    .mobile-text-2xl {
+      @apply text-xl;
+    }
+    
+    .mobile-text-3xl {
+      @apply text-2xl;
+    }
+    
+    .mobile-text-4xl {
+      @apply text-3xl;
+    }
+    
+    .mobile-spacing {
+      @apply space-y-4;
+    }
+    
+    .mobile-grid {
+      @apply grid-cols-1 gap-4;
+    }
+    
+    .mobile-mb-4 {
+      @apply mb-2;
+    }
+    
+    .mobile-mb-6 {
+      @apply mb-4;
+    }
+    
+    .mobile-mb-8 {
+      @apply mb-6;
+    }
+    
+    .mobile-py-12 {
+      @apply py-8;
+    }
+    
+    .mobile-py-16 {
+      @apply py-10;
+    }
+    
+    .mobile-py-20 {
+      @apply py-12;
+    }
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  /* Touch-friendly buttons for mobile */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent zoom on input focus on iOS */
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"] {
+      font-size: 16px;
+    }
+  }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better focus indicators for keyboard navigation */
+  .focus-visible:focus {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+  
+  /* Improve tap targets on mobile */
+  @media (hover: none) and (pointer: coarse) {
+    button,
+    [role="button"],
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"],
+    a {
+      min-height: 44px;
+      min-width: 44px;
+    }
   }
 }
