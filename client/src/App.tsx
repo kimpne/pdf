@@ -30,6 +30,8 @@ function Router() {
           <Route path="/word-to-pdf" component={WordToPDF} />
           <Route path="/pdf-to-jpg" component={PDFToJPG} />
           <Route path="/help-center" component={HelpCenter} />
+          {/* Legacy redirect for old lp-center path */}
+          <Route path="/lp-center" component={HelpCenter} />
           
           {/* Spanish routes */}
           <Route path="/es" component={Home} />
@@ -40,6 +42,7 @@ function Router() {
           <Route path="/es/word-to-pdf" component={WordToPDF} />
           <Route path="/es/pdf-to-jpg" component={PDFToJPG} />
           <Route path="/es/help-center" component={HelpCenter} />
+          <Route path="/es/lp-center" component={HelpCenter} />
           
           {/* French routes */}
           <Route path="/fr" component={Home} />
@@ -70,6 +73,7 @@ function Router() {
           <Route path="/ko/word-to-pdf" component={WordToPDF} />
           <Route path="/ko/pdf-to-jpg" component={PDFToJPG} />
           <Route path="/ko/help-center" component={HelpCenter} />
+          <Route path="/ko/lp-center" component={HelpCenter} />
           
           {/* Japanese routes */}
           <Route path="/ja" component={Home} />
