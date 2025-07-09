@@ -275,6 +275,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     '/status'
   ];
 
+  // 블로그 포스트 개별 라우트 처리
+  app.get('/blog/:slug', (req: Request, res: Response, next) => {
+    const userAgent = req.get('User-Agent') || '';
+    const isBot = /bot|crawler|spider|crawling/i.test(userAgent);
+    
+    if (isBot) {
+      // 검색엔진 크롤러인 경우 SEO 최적화된 HTML 제공
+      const blogPath = `/blog/${req.params.slug}`;
+      const seoHtml = generateFullHTML(blogPath);
+      res.setHeader('Content-Type', 'text/html');
+      res.send(seoHtml);
+    } else {
+      // 일반 사용자는 Vite 미들웨어로 넘김
+      next();
+    }
+  });
+
   // 검색엔진 크롤러용 SEO 최적화 라우트만 제공
   seoRoutes.forEach(route => {
     app.get(route, (req: Request, res: Response, next) => {

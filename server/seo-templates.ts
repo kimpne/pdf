@@ -160,7 +160,133 @@ const PAGE_SEO: Record<string, Partial<SEOTemplate>> = {
   }
 };
 
+// 블로그 포스트 데이터
+const BLOG_POSTS: Record<string, {
+  title: string;
+  description: string;
+  content: string;
+  publishDate: string;
+  readTime: string;
+  keywords: string;
+}> = {
+  'how-to-convert-pdf-to-word-safely': {
+    title: 'How to Convert PDF to Word Safely - Complete Security Guide',
+    description: 'Learn how to convert PDF to Word documents safely with our comprehensive security guide. Protect your sensitive data during PDF to Word conversion.',
+    content: `The Importance of Secure PDF to Word Conversion
+
+Converting PDF documents to Word format is a common task, but it often involves sensitive information that requires careful handling. This guide provides comprehensive security measures to protect your data during the conversion process.
+
+## Security Risks in PDF to Word Conversion
+
+### Data Exposure
+When using online conversion tools, your documents are temporarily stored on external servers, potentially exposing:
+- Personal information
+- Financial data
+- Business secrets
+- Legal documents
+
+### Malware Risks
+Malicious conversion tools might:
+- Inject malware into converted files
+- Steal document contents
+- Install tracking software
+- Compromise your system
+
+## Choosing Secure Conversion Tools
+
+### Key Security Features to Look For
+- **SSL/TLS Encryption**: Ensures data is encrypted during transmission
+- **Automatic File Deletion**: Files are deleted immediately after processing
+- **No Registration Required**: Reduces data collection and storage
+- **Privacy Policy**: Clear statements about data handling
+- **GDPR Compliance**: Adherence to privacy regulations
+
+### Red Flags to Avoid
+- Tools requiring personal information
+- Services without clear privacy policies
+- Platforms with excessive ads or pop-ups
+- Tools that require software installation
+- Services with poor security certificates
+
+## Step-by-Step Secure Conversion Process
+
+### Pre-Conversion Security Checks
+1. **Verify Tool Security**: Check for HTTPS encryption and security certificates
+2. **Review Privacy Policy**: Understand how your data will be handled
+3. **Create Backups**: Always keep original files secure
+4. **Remove Sensitive Data**: Redact confidential information if possible
+
+### During Conversion
+1. **Use Secure Connection**: Ensure you're on a trusted network
+2. **Monitor Progress**: Watch for unusual behavior or requests
+3. **Avoid Interruptions**: Don't close the browser or navigate away
+4. **Download Immediately**: Get your converted file as soon as it's ready
+
+### Post-Conversion Security
+1. **Scan for Malware**: Check the converted file with antivirus software
+2. **Verify Content**: Ensure all content was converted accurately
+3. **Check Formatting**: Verify that sensitive information wasn't corrupted
+4. **Secure Storage**: Store the converted file in a secure location
+
+Learn more about secure PDF conversion at PDFo.dev - your trusted source for free, secure PDF tools.`,
+    publishDate: '2024-01-15',
+    readTime: '8 min read',
+    keywords: 'PDF to Word security, secure PDF conversion, protect PDF data, safe file conversion, PDF privacy'
+  }
+};
+
 export function getSEOData(path: string): SEOTemplate {
+  // 블로그 포스트 처리
+  if (path.startsWith('/blog/')) {
+    const slug = path.replace('/blog/', '');
+    const post = BLOG_POSTS[slug];
+    
+    if (post) {
+      return {
+        title: `${post.title} | PDFo.dev Blog`,
+        description: post.description,
+        keywords: post.keywords,
+        canonical: `https://pdfo.dev${path}`,
+        ogImage: "https://pdfo.dev/og-image.jpg",
+        ogType: "article",
+        structuredData: {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.description,
+          "author": {
+            "@type": "Organization",
+            "name": "PDFo.dev"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "PDFo.dev",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://pdfo.dev/logo.png"
+            }
+          },
+          "datePublished": post.publishDate,
+          "dateModified": post.publishDate,
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://pdfo.dev${path}`
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://pdfo.dev/og-image.jpg",
+            "width": 1200,
+            "height": 630
+          },
+          "articleBody": post.content.substring(0, 1000) + "...",
+          "wordCount": post.content.split(' ').length,
+          "timeRequired": post.readTime,
+          "url": `https://pdfo.dev${path}`
+        }
+      };
+    }
+  }
+  
   const pageSEO = PAGE_SEO[path] || {};
   return {
     ...DEFAULT_SEO,
