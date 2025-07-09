@@ -275,22 +275,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
     '/status'
   ];
 
-  // 각 라우트에 대해 SEO 최적화된 HTML 제공
+  // 검색엔진 크롤러용 SEO 최적화 라우트만 제공
   seoRoutes.forEach(route => {
-    app.get(route, (req: Request, res: Response) => {
+    app.get(route, (req: Request, res: Response, next) => {
       const userAgent = req.get('User-Agent') || '';
       const isBot = /bot|crawler|spider|crawling/i.test(userAgent);
       
       if (isBot) {
-        // 검색엔진 크롤러인 경우 SEO 최적화된 HTML 제공
+        // 검색엔진 크롤러인 경우만 SEO 최적화된 HTML 제공
         const seoHtml = generateFullHTML(route);
         res.setHeader('Content-Type', 'text/html');
         res.send(seoHtml);
       } else {
-        // 일반 사용자에게도 기본 HTML 제공 (React 앱이 클라이언트 라우팅 처리)
-        const seoHtml = generateFullHTML(route);
-        res.setHeader('Content-Type', 'text/html');
-        res.send(seoHtml);
+        // 일반 사용자는 Vite 미들웨어로 넘김
+        next();
       }
     });
   });
