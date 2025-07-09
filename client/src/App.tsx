@@ -11,6 +11,7 @@ import CompressPDF from "@/pages/compress-pdf";
 import PDFToWord from "@/pages/pdf-to-word";
 import WordToPDF from "@/pages/word-to-pdf";
 import PDFToJPG from "@/pages/pdf-to-jpg";
+import HelpCenter from "@/pages/help-center";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
@@ -28,6 +29,7 @@ function Router() {
           <Route path="/pdf-to-word" component={PDFToWord} />
           <Route path="/word-to-pdf" component={WordToPDF} />
           <Route path="/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/help-center" component={HelpCenter} />
           
           {/* Spanish routes */}
           <Route path="/es" component={Home} />
@@ -37,6 +39,7 @@ function Router() {
           <Route path="/es/pdf-to-word" component={PDFToWord} />
           <Route path="/es/word-to-pdf" component={WordToPDF} />
           <Route path="/es/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/es/help-center" component={HelpCenter} />
           
           {/* French routes */}
           <Route path="/fr" component={Home} />
@@ -46,6 +49,7 @@ function Router() {
           <Route path="/fr/pdf-to-word" component={PDFToWord} />
           <Route path="/fr/word-to-pdf" component={WordToPDF} />
           <Route path="/fr/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/fr/help-center" component={HelpCenter} />
           
           {/* German routes */}
           <Route path="/de" component={Home} />
@@ -55,6 +59,7 @@ function Router() {
           <Route path="/de/pdf-to-word" component={PDFToWord} />
           <Route path="/de/word-to-pdf" component={WordToPDF} />
           <Route path="/de/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/de/help-center" component={HelpCenter} />
           
           {/* Korean routes */}
           <Route path="/ko" component={Home} />
@@ -64,6 +69,7 @@ function Router() {
           <Route path="/ko/pdf-to-word" component={PDFToWord} />
           <Route path="/ko/word-to-pdf" component={WordToPDF} />
           <Route path="/ko/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/ko/help-center" component={HelpCenter} />
           
           {/* Japanese routes */}
           <Route path="/ja" component={Home} />
@@ -73,6 +79,7 @@ function Router() {
           <Route path="/ja/pdf-to-word" component={PDFToWord} />
           <Route path="/ja/word-to-pdf" component={WordToPDF} />
           <Route path="/ja/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/ja/help-center" component={HelpCenter} />
           
           {/* Chinese Simplified routes */}
           <Route path="/zh-cn" component={Home} />
@@ -82,6 +89,7 @@ function Router() {
           <Route path="/zh-cn/pdf-to-word" component={PDFToWord} />
           <Route path="/zh-cn/word-to-pdf" component={WordToPDF} />
           <Route path="/zh-cn/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/zh-cn/help-center" component={HelpCenter} />
           
           {/* Chinese Traditional routes */}
           <Route path="/zh-tw" component={Home} />
@@ -91,6 +99,7 @@ function Router() {
           <Route path="/zh-tw/pdf-to-word" component={PDFToWord} />
           <Route path="/zh-tw/word-to-pdf" component={WordToPDF} />
           <Route path="/zh-tw/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/zh-tw/help-center" component={HelpCenter} />
           
           {/* Portuguese routes */}
           <Route path="/pt" component={Home} />
@@ -100,6 +109,7 @@ function Router() {
           <Route path="/pt/pdf-to-word" component={PDFToWord} />
           <Route path="/pt/word-to-pdf" component={WordToPDF} />
           <Route path="/pt/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/pt/help-center" component={HelpCenter} />
           
           {/* Italian routes */}
           <Route path="/it" component={Home} />
@@ -109,6 +119,7 @@ function Router() {
           <Route path="/it/pdf-to-word" component={PDFToWord} />
           <Route path="/it/word-to-pdf" component={WordToPDF} />
           <Route path="/it/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/it/help-center" component={HelpCenter} />
           
           {/* Russian routes */}
           <Route path="/ru" component={Home} />
@@ -118,6 +129,7 @@ function Router() {
           <Route path="/ru/pdf-to-word" component={PDFToWord} />
           <Route path="/ru/word-to-pdf" component={WordToPDF} />
           <Route path="/ru/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/ru/help-center" component={HelpCenter} />
           
           {/* Arabic routes */}
           <Route path="/ar" component={Home} />
@@ -127,6 +139,7 @@ function Router() {
           <Route path="/ar/pdf-to-word" component={PDFToWord} />
           <Route path="/ar/word-to-pdf" component={WordToPDF} />
           <Route path="/ar/pdf-to-jpg" component={PDFToJPG} />
+          <Route path="/ar/help-center" component={HelpCenter} />
           
           {/* 404 - Must be last */}
           <Route component={NotFound} />

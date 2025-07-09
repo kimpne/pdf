@@ -15,7 +15,7 @@ export default function Footer() {
   ];
 
   const supportLinks = [
-    { href: homeUrl, label: "Help Center" },
+    { href: localizeUrl("/help-center", currentLang), label: "Help Center" },
     { href: homeUrl, label: "Contact Us" },
     { href: homeUrl, label: "FAQ" },
     { href: homeUrl, label: "API" },
