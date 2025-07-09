@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pdftools.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Block certain paths
+Disallow: /api/
+Disallow: /uploads/
+Disallow: /admin/
+Disallow: /tmp/

@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222, 84%, 4.9%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 13.8%, 34.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 84%, 4.9%);
+  --border: hsl(214, 31.8%, 91.4%);
+  --input: hsl(214, 31.8%, 91.4%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222, 47.4%, 11.2%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222, 47.4%, 11.2%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(215, 20.2%, 65.1%);
+  --radius: 0.5rem;
+  
+  /* Custom PDF Tools colors */
+  --pdf-red: hsl(0, 91%, 71%);
+  --pdf-blue: hsl(221, 83%, 53%);
+  --pdf-green: hsl(142, 76%, 36%);
+  --pdf-purple: hsl(262, 83%, 58%);
+  --pdf-orange: hsl(25, 95%, 53%);
+  --pdf-pink: hsl(330, 81%, 60%);
+  --pdf-teal: hsl(178, 60%, 48%);
+  --pdf-indigo: hsl(231, 48%, 48%);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(221, 83%, 53%), hsl(221, 83%, 63%));
+  --gradient-hero: linear-gradient(135deg, hsl(221, 83%, 98%), hsl(221, 30%, 95%));
+}
+
+.dark {
+  --background: hsl(222, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(217, 32%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(217, 32%, 17%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .tool-card {
+    @apply bg-white rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-all duration-200 cursor-pointer;
+  }
+  
+  .tool-card:hover {
+    border-color: hsl(var(--primary) / 0.3);
+  }
+
+  .tool-icon {
+    @apply w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-200;
+  }
+
+  .upload-area {
+    @apply border-2 border-dashed rounded-xl p-8 bg-white transition-all duration-200 cursor-pointer;
+    border-color: hsl(var(--primary) / 0.3);
+  }
+  
+  .upload-area:hover {
+    border-color: hsl(var(--primary) / 0.5);
+  }
+
+  .upload-area.drag-over {
+    @apply border-primary;
+    background-color: hsl(var(--primary) / 0.05);
+  }
+
+  .feature-card {
+    @apply text-center p-6;
+  }
+
+  .feature-icon {
+    @apply w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6;
+    background-color: hsl(var(--primary) / 0.1);
+  }
+
+  .step-number {
+    @apply w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+  }
+  
+  .btn-primary:hover {
+    background-color: hsl(var(--primary) / 0.9);
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+  }
+  
+  .btn-secondary:hover {
+    background-color: hsl(var(--secondary) / 0.8);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
