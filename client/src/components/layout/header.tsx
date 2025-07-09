@@ -41,7 +41,7 @@ export default function Header() {
           
           <div className="flex items-center space-x-4">
             <Button className="hidden md:block">
-              Get Started
+              Start PDF Editing
             </Button>
             
             <Sheet>
@@ -68,7 +68,7 @@ export default function Header() {
                   ))}
                   
                   <Button className="mt-6">
-                    Get Started
+                    Start PDF Editing
                   </Button>
                 </div>
               </SheetContent>
