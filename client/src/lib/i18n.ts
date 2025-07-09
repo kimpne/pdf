@@ -99,7 +99,7 @@ export const SUPPORTED_LANGUAGES: Language[] = [
     code: 'ar',
     name: 'العربية',
     englishName: 'Arabic',
-    flag: '🇸🇦',
+    flag: '🇦🇪',
     dir: 'rtl'
   }
 ];

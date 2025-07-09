@@ -20,6 +20,7 @@ function Router() {
       <Header />
       <main className="flex-1">
         <Switch>
+          {/* English (default) routes */}
           <Route path="/" component={Home} />
           <Route path="/merge-pdf" component={MergePDF} />
           <Route path="/split-pdf" component={SplitPDF} />
@@ -27,6 +28,107 @@ function Router() {
           <Route path="/pdf-to-word" component={PDFToWord} />
           <Route path="/word-to-pdf" component={WordToPDF} />
           <Route path="/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* Spanish routes */}
+          <Route path="/es" component={Home} />
+          <Route path="/es/merge-pdf" component={MergePDF} />
+          <Route path="/es/split-pdf" component={SplitPDF} />
+          <Route path="/es/compress-pdf" component={CompressPDF} />
+          <Route path="/es/pdf-to-word" component={PDFToWord} />
+          <Route path="/es/word-to-pdf" component={WordToPDF} />
+          <Route path="/es/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* French routes */}
+          <Route path="/fr" component={Home} />
+          <Route path="/fr/merge-pdf" component={MergePDF} />
+          <Route path="/fr/split-pdf" component={SplitPDF} />
+          <Route path="/fr/compress-pdf" component={CompressPDF} />
+          <Route path="/fr/pdf-to-word" component={PDFToWord} />
+          <Route path="/fr/word-to-pdf" component={WordToPDF} />
+          <Route path="/fr/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* German routes */}
+          <Route path="/de" component={Home} />
+          <Route path="/de/merge-pdf" component={MergePDF} />
+          <Route path="/de/split-pdf" component={SplitPDF} />
+          <Route path="/de/compress-pdf" component={CompressPDF} />
+          <Route path="/de/pdf-to-word" component={PDFToWord} />
+          <Route path="/de/word-to-pdf" component={WordToPDF} />
+          <Route path="/de/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* Korean routes */}
+          <Route path="/ko" component={Home} />
+          <Route path="/ko/merge-pdf" component={MergePDF} />
+          <Route path="/ko/split-pdf" component={SplitPDF} />
+          <Route path="/ko/compress-pdf" component={CompressPDF} />
+          <Route path="/ko/pdf-to-word" component={PDFToWord} />
+          <Route path="/ko/word-to-pdf" component={WordToPDF} />
+          <Route path="/ko/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* Japanese routes */}
+          <Route path="/ja" component={Home} />
+          <Route path="/ja/merge-pdf" component={MergePDF} />
+          <Route path="/ja/split-pdf" component={SplitPDF} />
+          <Route path="/ja/compress-pdf" component={CompressPDF} />
+          <Route path="/ja/pdf-to-word" component={PDFToWord} />
+          <Route path="/ja/word-to-pdf" component={WordToPDF} />
+          <Route path="/ja/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* Chinese Simplified routes */}
+          <Route path="/zh-cn" component={Home} />
+          <Route path="/zh-cn/merge-pdf" component={MergePDF} />
+          <Route path="/zh-cn/split-pdf" component={SplitPDF} />
+          <Route path="/zh-cn/compress-pdf" component={CompressPDF} />
+          <Route path="/zh-cn/pdf-to-word" component={PDFToWord} />
+          <Route path="/zh-cn/word-to-pdf" component={WordToPDF} />
+          <Route path="/zh-cn/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* Chinese Traditional routes */}
+          <Route path="/zh-tw" component={Home} />
+          <Route path="/zh-tw/merge-pdf" component={MergePDF} />
+          <Route path="/zh-tw/split-pdf" component={SplitPDF} />
+          <Route path="/zh-tw/compress-pdf" component={CompressPDF} />
+          <Route path="/zh-tw/pdf-to-word" component={PDFToWord} />
+          <Route path="/zh-tw/word-to-pdf" component={WordToPDF} />
+          <Route path="/zh-tw/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* Portuguese routes */}
+          <Route path="/pt" component={Home} />
+          <Route path="/pt/merge-pdf" component={MergePDF} />
+          <Route path="/pt/split-pdf" component={SplitPDF} />
+          <Route path="/pt/compress-pdf" component={CompressPDF} />
+          <Route path="/pt/pdf-to-word" component={PDFToWord} />
+          <Route path="/pt/word-to-pdf" component={WordToPDF} />
+          <Route path="/pt/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* Italian routes */}
+          <Route path="/it" component={Home} />
+          <Route path="/it/merge-pdf" component={MergePDF} />
+          <Route path="/it/split-pdf" component={SplitPDF} />
+          <Route path="/it/compress-pdf" component={CompressPDF} />
+          <Route path="/it/pdf-to-word" component={PDFToWord} />
+          <Route path="/it/word-to-pdf" component={WordToPDF} />
+          <Route path="/it/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* Russian routes */}
+          <Route path="/ru" component={Home} />
+          <Route path="/ru/merge-pdf" component={MergePDF} />
+          <Route path="/ru/split-pdf" component={SplitPDF} />
+          <Route path="/ru/compress-pdf" component={CompressPDF} />
+          <Route path="/ru/pdf-to-word" component={PDFToWord} />
+          <Route path="/ru/word-to-pdf" component={WordToPDF} />
+          <Route path="/ru/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* Arabic routes */}
+          <Route path="/ar" component={Home} />
+          <Route path="/ar/merge-pdf" component={MergePDF} />
+          <Route path="/ar/split-pdf" component={SplitPDF} />
+          <Route path="/ar/compress-pdf" component={CompressPDF} />
+          <Route path="/ar/pdf-to-word" component={PDFToWord} />
+          <Route path="/ar/word-to-pdf" component={WordToPDF} />
+          <Route path="/ar/pdf-to-jpg" component={PDFToJPG} />
+          
+          {/* 404 - Must be last */}
           <Route component={NotFound} />
         </Switch>
       </main>
