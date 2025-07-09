@@ -284,6 +284,12 @@ export function generateMetaTags(seoData: SEOTemplate): string {
     <meta name="keywords" content="${seoData.keywords}" />
     <link rel="canonical" href="${seoData.canonical}" />
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/favicon-16x16.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
     <!-- Open Graph -->
     <meta property="og:title" content="${seoData.title}" />
     <meta property="og:description" content="${seoData.description}" />

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <defs>
+    <linearGradient id="docGradient16" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Document base -->
+  <rect x="2" y="2" width="10" height="12" rx="1" ry="1" fill="url(#docGradient16)" stroke="#7f1d1d" stroke-width="0.25"/>
+  
+  <!-- Document fold -->
+  <path d="M10 2 L10 4 L12 4 Z" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.25"/>
+  
+  <!-- Text lines -->
+  <rect x="3.5" y="6" width="5" height="0.5" fill="#fca5a5" opacity="0.8"/>
+  <rect x="3.5" y="7.5" width="4" height="0.5" fill="#fca5a5" opacity="0.8"/>
+  <rect x="3.5" y="9" width="4.5" height="0.5" fill="#fca5a5" opacity="0.8"/>
+  <rect x="3.5" y="10.5" width="3.5" height="0.5" fill="#fca5a5" opacity="0.8"/>
+</svg>
