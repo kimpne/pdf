@@ -1,14 +1,65 @@
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://pdftools.com/sitemap.xml
-
-# Crawl delay
-Crawl-delay: 1
-
-# Block certain paths
 Disallow: /api/
 Disallow: /uploads/
 Disallow: /admin/
 Disallow: /tmp/
+Disallow: /server/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /404
+Disallow: /500
+Crawl-delay: 1
+
+# Allow specific search engines with optimized settings
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /uploads/
+Disallow: /admin/
+Disallow: /tmp/
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /uploads/
+Disallow: /admin/
+Disallow: /tmp/
+Crawl-delay: 1
+
+# Block problematic bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Allow social media crawlers for Open Graph
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://pdfo.dev/sitemap.xml
