@@ -78,6 +78,7 @@ Preferred SEO approach: Comprehensive multi-language global SEO targeting intern
 - **FAQ Page**: `/faq` - Comprehensive frequently asked questions with SEO optimization
 - **API Documentation**: `/api-docs` - Complete developer documentation for REST API
 - **Status Page**: `/status` - Real-time service status and uptime monitoring
+- **Privacy Policy**: `/privacy-policy` - GDPR compliant privacy policy with data protection details
 - **Features**: Collapsible sections, category filtering, keyword highlighting, code examples, live updates
 - **SEO**: Structured data, meta tags, and keyword optimization for search engines
 

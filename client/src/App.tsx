@@ -15,6 +15,7 @@ import HelpCenter from "@/pages/help-center";
 import FAQ from "@/pages/faq";
 import APIDocs from "@/pages/api-docs";
 import Status from "@/pages/status";
+import PrivacyPolicy from "@/pages/privacy-policy";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
@@ -36,6 +37,7 @@ function Router() {
           <Route path="/faq" component={FAQ} />
           <Route path="/api-docs" component={APIDocs} />
           <Route path="/status" component={Status} />
+          <Route path="/privacy-policy" component={PrivacyPolicy} />
           {/* Legacy redirect for old lp-center path */}
           <Route path="/lp-center" component={HelpCenter} />
           
@@ -51,6 +53,7 @@ function Router() {
           <Route path="/es/faq" component={FAQ} />
           <Route path="/es/api-docs" component={APIDocs} />
           <Route path="/es/status" component={Status} />
+          <Route path="/es/privacy-policy" component={PrivacyPolicy} />
           <Route path="/es/lp-center" component={HelpCenter} />
           
           {/* French routes */}
@@ -85,6 +88,7 @@ function Router() {
           <Route path="/ko/faq" component={FAQ} />
           <Route path="/ko/api-docs" component={APIDocs} />
           <Route path="/ko/status" component={Status} />
+          <Route path="/ko/privacy-policy" component={PrivacyPolicy} />
           <Route path="/ko/lp-center" component={HelpCenter} />
           
           {/* Japanese routes */}
