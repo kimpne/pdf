@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import FileUpload from "@/components/pdf-tools/file-upload";
 import ToolCard from "@/components/pdf-tools/tool-card";
-import SEOHead from "@/components/layout/seo-head";
+import MultiLangSEOHead from "@/components/layout/multi-lang-seo-head";
+import LanguageSwitcher from "@/components/layout/language-switcher";
 import type { ToolMetadata } from "@shared/schema";
+import { getCurrentLanguage } from "@/lib/i18n";
+import { getTranslation, t } from "@/lib/translations";
 
 const tools: ToolMetadata[] = [
   {
@@ -108,27 +111,34 @@ const features = [
 ];
 
 export default function Home() {
+  const currentLang = getCurrentLanguage();
+  const translation = getTranslation(currentLang);
+  
   return (
     <>
-      <SEOHead 
-        title="Free PDF Tools - Merge, Split, Compress & Convert Online | PDF Tools"
-        description="Professional PDF tools online for free. Merge PDFs, split documents, compress files, convert PDF to Word & more. No registration needed. 100% secure & fast processing."
-        keywords="free PDF tools, merge PDF online, split PDF, compress PDF, PDF to Word converter, Word to PDF, PDF to JPG, online PDF editor, free PDF merger, PDF splitter"
+      <MultiLangSEOHead 
+        title={translation.seo.title}
+        description={translation.seo.description}
+        keywords={translation.seo.keywords}
         ogImage="/og-pdf-tools.svg"
         structuredDataType="SoftwareApplication"
+        languageCode={currentLang}
       />
       
       {/* Hero Section */}
       <section className="gradient-hero py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            {/* Language Switcher */}
+            <div className="flex justify-end mb-8">
+              <LanguageSwitcher />
+            </div>
+            
             <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6">
-              Every tool you need to work with
-              <span className="text-primary"> PDFs</span> in one place
+              {t('hero.title', currentLang)}
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-              Merge, split, compress, and convert PDF files for free. 
-              Fast, secure, and easy to use - no registration required.
+              {t('hero.subtitle', currentLang)}
             </p>
             
             <div className="max-w-2xl mx-auto mb-8">
@@ -138,7 +148,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <div className="flex items-center gap-2">
                 <i className="fas fa-shield-alt"></i>
-                100% Secure
+                {t('hero.features.secure', currentLang)}
               </div>
               <div className="flex items-center gap-2">
                 <i className="fas fa-clock"></i>

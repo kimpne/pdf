@@ -8,6 +8,7 @@ This is a full-stack PDF processing application built with React/TypeScript fron
 
 Preferred communication style: Simple, everyday language.
 Preferred explanation language: Korean for technical explanations.
+Preferred SEO approach: Comprehensive multi-language global SEO targeting international users.
 
 ## System Architecture
 
@@ -19,6 +20,8 @@ Preferred explanation language: Korean for technical explanations.
 - **State Management**: TanStack Query for server state management
 - **Routing**: Wouter for lightweight client-side routing
 - **Form Handling**: React Hook Form with Zod validation
+- **Internationalization**: Custom i18n system with 12+ language support
+- **SEO**: Multi-language SEO optimization with hreflang tags
 
 ### Backend Architecture
 - **Runtime**: Node.js with Express.js framework
@@ -35,6 +38,21 @@ Preferred explanation language: Korean for technical explanations.
 - **Fallback Storage**: In-memory storage implementation for development
 
 ## Key Components
+
+### Multi-Language System
+- **MultiLangSEOHead**: SEO-optimized head component with automatic hreflang generation
+- **LanguageSwitcher**: Language switcher with dropdown, compact, and horizontal variants
+- **i18n System**: Custom internationalization with 12+ language support (English, Spanish, French, German, Korean, Japanese, Chinese, Portuguese, Italian, Russian, Arabic)
+- **Translation Management**: Structured translation system with nested keys for maintainability
+- **URL Localization**: Language-specific URL routing (e.g., /es/merge-pdf, /ko/merge-pdf)
+- **RTL Support**: Right-to-left language support for Arabic
+
+### SEO Enhancement Features
+- **Hreflang Tags**: Automatic generation of language alternative URLs
+- **Structured Data**: Multi-language schema.org markup with language variants
+- **Meta Tag Optimization**: Localized titles, descriptions, and keywords
+- **Open Graph**: Multi-language social media optimization
+- **Canonical URLs**: Language-specific canonical tag management
 
 ### PDF Processing Service
 - **Location**: `server/services/pdf-processor.ts`
