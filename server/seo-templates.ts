@@ -1,8 +1,3 @@
-/**
- * SEO 템플릿 및 메타 태그 생성 유틸리티
- * 서버 사이드에서 기본적인 SEO 정보를 제공하여 검색엔진 크롤링 향상
- */
-
 interface SEOTemplate {
   title: string;
   description: string;
@@ -13,519 +8,273 @@ interface SEOTemplate {
   structuredData: object;
 }
 
-// 기본 SEO 템플릿
 const DEFAULT_SEO: SEOTemplate = {
-  title: "Free PDF Tools Online - Merge, Split, Compress PDFs | PDFo.dev",
-  description: "Free online PDF tools for merging, splitting, compressing, and converting PDFs. Fast, secure, and no registration required. Process your PDF files instantly at PDFo.dev.",
-  keywords: "PDF tools, merge PDF, split PDF, compress PDF, convert PDF to Word, online PDF editor, PDF converter, free PDF tools, PDF merger, PDF splitter",
-  canonical: "https://pdfo.dev/",
-  ogImage: "https://pdfo.dev/og-image.jpg",
-  ogType: "website",
+  title: 'PDFo.dev - Free PDF Tools Online | Merge, Split, Compress PDFs',
+  description: 'Free online PDF tools for everyone. Merge, split, compress, and convert PDF files securely and easily. No registration required.',
+  keywords: 'PDF tools, merge PDF, split PDF, compress PDF, PDF converter, free PDF editor, online PDF tools',
+  canonical: 'https://pdfo.dev/',
+  ogImage: 'https://pdfo.dev/og-image.jpg',
+  ogType: 'website',
   structuredData: {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "PDFo.dev - Free Online PDF Tools",
-    "description": "Free online PDF tools for merging, splitting, compressing, and converting PDFs. Fast, secure, and no registration required.",
-    "url": "https://pdfo.dev",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://pdfo.dev/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "PDFo.dev",
-      "url": "https://pdfo.dev",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://pdfo.dev/logo.png",
-        "width": 512,
-        "height": 512
-      }
-    },
-    "sameAs": [
-      "https://twitter.com/pdfodev",
-      "https://facebook.com/pdfodev",
-      "https://linkedin.com/company/pdfodev"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "description": "Free online PDF tools"
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'PDFo.dev',
+    description: 'Free online PDF tools for everyone',
+    url: 'https://pdfo.dev',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://pdfo.dev/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string'
     }
-  }
-};
-
-// 페이지별 SEO 설정
-const PAGE_SEO: Record<string, Partial<SEOTemplate>> = {
-  '/': DEFAULT_SEO,
-  '/merge-pdf': {
-    title: "Merge PDF Files Online Free - Combine Multiple PDFs | PDFo.dev",
-    description: "Merge multiple PDF files into one document online for free. Fast, secure PDF merger with no registration required. Combine your PDFs instantly at PDFo.dev.",
-    keywords: "merge PDF, combine PDF, PDF merger, join PDF files, PDF combiner, free PDF merge tool",
-    canonical: "https://pdfo.dev/merge-pdf",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PDF Merger - PDFo.dev",
-      "description": "Merge multiple PDF files into one document online for free.",
-      "url": "https://pdfo.dev/merge-pdf",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Any",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-  },
-  '/split-pdf': {
-    title: "Split PDF Files Online Free - Extract PDF Pages | PDFo.dev",
-    description: "Split PDF files online for free. Extract specific pages or split into multiple documents. Fast, secure PDF splitter with no registration required.",
-    keywords: "split PDF, PDF splitter, extract PDF pages, divide PDF, PDF page extractor",
-    canonical: "https://pdfo.dev/split-pdf",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PDF Splitter - PDFo.dev",
-      "description": "Split PDF files online for free. Extract specific pages or split into multiple documents.",
-      "url": "https://pdfo.dev/split-pdf"
-    }
-  },
-  '/compress-pdf': {
-    title: "Compress PDF Files Online Free - Reduce PDF Size | PDFo.dev",
-    description: "Compress PDF files online for free. Reduce PDF file size while maintaining quality. Fast, secure PDF compression with no registration required.",
-    keywords: "compress PDF, reduce PDF size, PDF compressor, optimize PDF, shrink PDF file",
-    canonical: "https://pdfo.dev/compress-pdf",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PDF Compressor - PDFo.dev",
-      "description": "Compress PDF files online for free. Reduce PDF file size while maintaining quality.",
-      "url": "https://pdfo.dev/compress-pdf"
-    }
-  },
-  '/pdf-to-word': {
-    title: "Convert PDF to Word Online Free - PDF to DOC Converter | PDFo.dev",
-    description: "Convert PDF to Word documents online for free. High-quality PDF to DOC/DOCX conversion with no registration required. Edit your PDFs as Word files.",
-    keywords: "PDF to Word, convert PDF to DOC, PDF to DOCX, PDF converter, edit PDF in Word",
-    canonical: "https://pdfo.dev/pdf-to-word",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PDF to Word Converter - PDFo.dev",
-      "description": "Convert PDF to Word documents online for free.",
-      "url": "https://pdfo.dev/pdf-to-word"
-    }
-  },
-  '/word-to-pdf': {
-    title: "Convert Word to PDF Online Free - DOC to PDF Converter | PDFo.dev",
-    description: "Convert Word documents to PDF online for free. High-quality DOC/DOCX to PDF conversion with no registration required. Create PDFs from Word files.",
-    keywords: "Word to PDF, convert DOC to PDF, DOCX to PDF, Word converter, create PDF from Word",
-    canonical: "https://pdfo.dev/word-to-pdf",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Word to PDF Converter - PDFo.dev",
-      "description": "Convert Word documents to PDF online for free.",
-      "url": "https://pdfo.dev/word-to-pdf"
-    }
-  },
-  '/pdf-to-jpg': {
-    title: "Convert PDF to JPG Online Free - PDF to Image Converter | PDFo.dev",
-    description: "Convert PDF pages to JPG images online for free. High-quality PDF to image conversion with no registration required. Extract images from PDFs.",
-    keywords: "PDF to JPG, convert PDF to image, PDF to JPEG, extract images from PDF, PDF image converter",
-    canonical: "https://pdfo.dev/pdf-to-jpg",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PDF to JPG Converter - PDFo.dev",
-      "description": "Convert PDF pages to JPG images online for free.",
-      "url": "https://pdfo.dev/pdf-to-jpg"
-    }
-  },
-  '/blog': {
-    title: "PDF Tools Blog - Tips, Tricks & Tutorials | PDFo.dev",
-    description: "Learn about PDF tools, tips, tricks, and best practices. Comprehensive guides for PDF editing, conversion, and optimization.",
-    keywords: "PDF blog, PDF tips, PDF tutorials, PDF guides, PDF best practices",
-    canonical: "https://pdfo.dev/blog",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "PDFo.dev Blog",
-      "description": "Learn about PDF tools, tips, tricks, and best practices.",
-      "url": "https://pdfo.dev/blog"
-    }
-  }
-};
-
-// 블로그 포스트 데이터
-const BLOG_POSTS: Record<string, {
-  title: string;
-  description: string;
-  content: string;
-  publishDate: string;
-  readTime: string;
-  keywords: string;
-}> = {
-  'how-to-merge-pdf-files-online': {
-    title: 'How to Merge PDF Files Online - Complete Guide for 2024',
-    description: 'Learn how to merge PDF files online safely and efficiently. Step-by-step guide with security tips and best practices for combining multiple PDFs.',
-    content: `How to Merge PDF Files Online - Complete Guide
-
-Merging PDF files is a common task for professionals, students, and businesses. Whether you need to combine reports, merge invoices, or consolidate documents, this comprehensive guide will show you how to merge PDF files online safely and efficiently.
-
-## Why Merge PDF Files?
-
-### Common Use Cases
-- **Business Reports**: Combine multiple department reports into one comprehensive document
-- **Academic Papers**: Merge research papers, citations, and appendices
-- **Legal Documents**: Consolidate contracts, agreements, and supporting documents
-- **Marketing Materials**: Combine brochures, presentations, and proposals
-- **Personal Documents**: Merge scanned documents, receipts, and certificates
-
-### Benefits of Online PDF Merging
-- **No Software Installation**: Work directly in your web browser
-- **Cross-Platform Compatibility**: Works on Windows, Mac, Linux, and mobile devices
-- **Instant Processing**: Fast merging without waiting for downloads
-- **Cost-Effective**: Many free tools available online
-- **Always Updated**: No need to update software manually
-
-## Step-by-Step Guide to Merge PDFs Online
-
-### 1. Choose a Reliable PDF Merger Tool
-Select a reputable online service that offers:
-- **SSL Encryption**: Secure file transmission
-- **File Deletion**: Automatic removal of uploaded files
-- **No Registration**: Tools that don't require account creation
-- **Multiple Formats**: Support for various PDF versions
-
-### 2. Upload Your PDF Files
-1. Click "Choose Files" or drag and drop your PDFs
-2. Select multiple files by holding Ctrl (Windows) or Cmd (Mac)
-3. Verify all files are uploaded correctly
-4. Check file sizes and ensure they're within limits
-
-### 3. Arrange Files in Order
-- **Drag and Drop**: Reorder files by dragging them
-- **Preview**: Use preview feature to verify content
-- **Remove Files**: Delete incorrect uploads before merging
-- **Add More**: Upload additional files if needed
-
-### 4. Configure Merge Settings
-- **Page Selection**: Choose specific pages from each PDF
-- **Bookmarks**: Preserve or remove existing bookmarks
-- **Metadata**: Include or exclude document properties
-- **Compression**: Optimize file size if needed
-
-### 5. Start the Merging Process
-1. Click "Merge PDFs" or similar button
-2. Wait for processing to complete
-3. Download the merged PDF immediately
-4. Verify the merged document is correct
-
-## Security Best Practices
-
-### Protecting Your Documents
-1. **Use HTTPS Sites**: Ensure URLs start with "https://"
-2. **Check Privacy Policy**: Verify how files are handled
-3. **Private Browsing**: Use incognito mode for sensitive documents
-4. **VPN Usage**: Consider using a VPN for extra security
-5. **Clear Browser Data**: Clear downloads and cache after use
-
-## Advanced Merging Techniques
-
-### Page-Level Merging
-- **Selective Pages**: Choose specific pages from each PDF
-- **Custom Ranges**: Merge page ranges (e.g., pages 1-5, 10-15)
-- **Alternating Pages**: Interleave pages from different documents
-- **Bookmarks**: Preserve or create new bookmarks in merged document
-
-### Quality Optimization
-- **Compression Settings**: Balance file size and quality
-- **Resolution Control**: Maintain image quality in merged documents
-- **Font Embedding**: Ensure fonts display correctly
-- **Color Profiles**: Preserve color accuracy
-
-## Troubleshooting Common Issues
-
-### File Upload Problems
-- **Large Files**: Use tools that support larger file sizes
-- **Corrupted PDFs**: Repair damaged files before merging
-- **Password Protection**: Remove passwords before uploading
-- **Unsupported Formats**: Ensure all files are valid PDFs
-
-### Merging Errors
-- **Memory Limits**: Break large merges into smaller batches
-- **Compatibility Issues**: Use updated PDF versions
-- **Network Timeouts**: Use stable internet connections
-- **Processing Limits**: Respect tool limitations
-
-## Free vs. Premium Tools
-
-### Free Tools Limitations
-- **File Size Limits**: Usually 10-100MB per file
-- **Daily Limits**: Limited number of merges per day
-- **Watermarks**: Some tools add watermarks to merged files
-- **Basic Features**: Limited customization options
-
-### Premium Features
-- **Unlimited Processing**: No file size or quantity limits
-- **Advanced Options**: Custom page ranges, bookmarks, security settings
-- **Batch Processing**: Merge multiple document sets simultaneously
-- **Priority Support**: Faster processing and customer support
-
-## Conclusion
-
-Merging PDF files online is a convenient and efficient way to combine documents for various purposes. By following security best practices and choosing reliable tools, you can safely merge your PDFs while maintaining document quality and protecting your privacy.
-
-For the most secure and efficient PDF merging experience, try PDFo.dev - your trusted source for free, secure PDF tools.`,
-    publishDate: '2024-01-20',
-    readTime: '10 min read',
-    keywords: 'merge PDF online, combine PDF files, PDF merger tool, merge documents, PDF combiner'
-  },
-  'how-to-convert-pdf-to-word-safely': {
-    title: 'How to Convert PDF to Word Safely - Complete Security Guide',
-    description: 'Learn how to convert PDF to Word documents safely with our comprehensive security guide. Protect your sensitive data during PDF to Word conversion.',
-    content: `The Importance of Secure PDF to Word Conversion
-
-Converting PDF documents to Word format is a common task, but it often involves sensitive information that requires careful handling. This guide provides comprehensive security measures to protect your data during the conversion process.
-
-## Security Risks in PDF to Word Conversion
-
-### Data Exposure
-When using online conversion tools, your documents are temporarily stored on external servers, potentially exposing:
-- Personal information
-- Financial data
-- Business secrets
-- Legal documents
-
-### Malware Risks
-Malicious conversion tools might:
-- Inject malware into converted files
-- Steal document contents
-- Install tracking software
-- Compromise your system
-
-## Choosing Secure Conversion Tools
-
-### Key Security Features to Look For
-- **SSL/TLS Encryption**: Ensures data is encrypted during transmission
-- **Automatic File Deletion**: Files are deleted immediately after processing
-- **No Registration Required**: Reduces data collection and storage
-- **Privacy Policy**: Clear statements about data handling
-- **GDPR Compliance**: Adherence to privacy regulations
-
-### Red Flags to Avoid
-- Tools requiring personal information
-- Services without clear privacy policies
-- Platforms with excessive ads or pop-ups
-- Tools that require software installation
-- Services with poor security certificates
-
-## Step-by-Step Secure Conversion Process
-
-### Pre-Conversion Security Checks
-1. **Verify Tool Security**: Check for HTTPS encryption and security certificates
-2. **Review Privacy Policy**: Understand how your data will be handled
-3. **Create Backups**: Always keep original files secure
-4. **Remove Sensitive Data**: Redact confidential information if possible
-
-### During Conversion
-1. **Use Secure Connection**: Ensure you're on a trusted network
-2. **Monitor Progress**: Watch for unusual behavior or requests
-3. **Avoid Interruptions**: Don't close the browser or navigate away
-4. **Download Immediately**: Get your converted file as soon as it's ready
-
-### Post-Conversion Security
-1. **Scan for Malware**: Check the converted file with antivirus software
-2. **Verify Content**: Ensure all content was converted accurately
-3. **Check Formatting**: Verify that sensitive information wasn't corrupted
-4. **Secure Storage**: Store the converted file in a secure location
-
-Learn more about secure PDF conversion at PDFo.dev - your trusted source for free, secure PDF tools.`,
-    publishDate: '2024-01-15',
-    readTime: '8 min read',
-    keywords: 'PDF to Word security, secure PDF conversion, protect PDF data, safe file conversion, PDF privacy'
-  },
-  'how-to-merge-pdf-files-online': {
-    title: 'How to Merge PDF Files Online - Complete Guide for 2024',
-    description: 'Learn how to merge PDF files online safely and efficiently. Step-by-step guide with security tips and best practices for combining multiple PDFs.',
-    content: `How to Merge PDF Files Online - Complete Guide
-
-Merging PDF files is a common task for professionals, students, and businesses. Whether you need to combine reports, merge invoices, or consolidate documents, this comprehensive guide will show you how to merge PDF files online safely and efficiently.
-
-## Why Merge PDF Files?
-
-### Common Use Cases
-- **Business Reports**: Combine multiple department reports into one comprehensive document
-- **Academic Papers**: Merge research papers, citations, and appendices
-- **Legal Documents**: Consolidate contracts, agreements, and supporting documents
-- **Marketing Materials**: Combine brochures, presentations, and proposals
-- **Personal Documents**: Merge scanned documents, receipts, and certificates
-
-### Benefits of Online PDF Merging
-- **No Software Installation**: Work directly in your web browser
-- **Cross-Platform Compatibility**: Works on Windows, Mac, Linux, and mobile devices
-- **Instant Processing**: Fast merging without waiting for downloads
-- **Cost-Effective**: Free tools available for basic merging needs
-- **Accessibility**: Access from any device with internet connection
-
-## Step-by-Step Guide to Merge PDFs Online
-
-### 1. Choose a Reliable PDF Merger Tool
-When selecting an online PDF merger, consider:
-- **Security Features**: Look for SSL encryption and automatic file deletion
-- **File Size Limits**: Ensure it supports your document sizes
-- **Quality Preservation**: Maintains original document quality
-- **User Interface**: Easy-to-use drag-and-drop functionality
-- **Privacy Policy**: Clear data handling practices
-
-### 2. Upload Your PDF Files
-1. **Select Files**: Click "Choose Files" or drag and drop your PDFs
-2. **Multiple Selection**: Hold Ctrl (Windows) or Cmd (Mac) to select multiple files
-3. **File Order**: Arrange files in the desired order for merging
-4. **Preview**: Check file thumbnails to ensure correct selection
-
-### 3. Arrange and Organize
-- **Drag and Drop**: Reorder files by dragging them to the desired position
-- **Remove Files**: Delete unwanted files before merging
-- **Page Selection**: Some tools allow selecting specific pages from each PDF
-- **Preview Mode**: Review the arrangement before processing
-
-### 4. Merge and Download
-1. **Click Merge**: Start the merging process
-2. **Processing Time**: Wait for the tool to combine your files
-3. **Download Link**: Get the download link for your merged PDF
-4. **Save Locally**: Save the merged file to your device
-
-## Security Considerations
-
-### Protecting Your Documents
-- **Use HTTPS**: Ensure the website uses secure connections
-- **File Deletion**: Choose tools that automatically delete files after processing
-- **Privacy Policy**: Read and understand data handling practices
-- **Sensitive Data**: Avoid uploading confidential documents to unknown services
-- **Local Processing**: Consider offline tools for highly sensitive documents
-
-### Best Practices for Online Merging
-1. **Backup Originals**: Always keep copies of original files
-2. **Check File Integrity**: Verify merged document completeness
-3. **Scan for Malware**: Use antivirus software on downloaded files
-4. **Secure Networks**: Use trusted internet connections
-5. **Clear Browser Data**: Clear downloads and cache after use
-
-## Advanced Merging Techniques
-
-### Page-Level Merging
-- **Selective Pages**: Choose specific pages from each PDF
-- **Custom Ranges**: Merge page ranges (e.g., pages 1-5, 10-15)
-- **Alternating Pages**: Interleave pages from different documents
-- **Bookmarks**: Preserve or create new bookmarks in merged document
-
-### Quality Optimization
-- **Compression Settings**: Balance file size and quality
-- **Resolution Control**: Maintain image quality in merged documents
-- **Font Embedding**: Ensure fonts display correctly
-- **Color Profiles**: Preserve color accuracy
-
-## Troubleshooting Common Issues
-
-### File Upload Problems
-- **Large Files**: Use tools that support larger file sizes
-- **Corrupted PDFs**: Repair damaged files before merging
-- **Password Protection**: Remove passwords before uploading
-- **Unsupported Formats**: Ensure all files are valid PDFs
-
-### Merging Errors
-- **Memory Limits**: Break large merges into smaller batches
-- **Compatibility Issues**: Use updated PDF versions
-- **Network Timeouts**: Use stable internet connections
-- **Processing Limits**: Respect tool limitations
-
-## Free vs. Premium Tools
-
-### Free Tools Limitations
-- **File Size Limits**: Usually 10-100MB per file
-- **Daily Limits**: Limited number of merges per day
-- **Watermarks**: Some tools add watermarks to merged files
-- **Basic Features**: Limited customization options
-
-### Premium Features
-- **Unlimited Processing**: No file size or quantity limits
-- **Advanced Options**: Custom page ranges, bookmarks, security settings
-- **Batch Processing**: Merge multiple document sets simultaneously
-- **Priority Support**: Faster processing and customer support
-
-## Conclusion
-
-Merging PDF files online is a convenient and efficient way to combine documents for various purposes. By following security best practices and choosing reliable tools, you can safely merge your PDFs while maintaining document quality and protecting your privacy.
-
-For the most secure and efficient PDF merging experience, try PDFo.dev - your trusted source for free, secure PDF tools.`,
-    publishDate: '2024-01-20',
-    readTime: '10 min read',
-    keywords: 'merge PDF online, combine PDF files, PDF merger tool, merge documents, PDF combiner'
   }
 };
 
 export function getSEOData(path: string): SEOTemplate {
-  // 블로그 포스트 처리
-  if (path.startsWith('/blog/')) {
-    const slug = path.replace('/blog/', '');
-    const post = BLOG_POSTS[slug];
-    
-    if (post) {
-      return {
-        title: `${post.title} | PDFo.dev Blog`,
-        description: post.description,
-        keywords: post.keywords,
-        canonical: `https://pdfo.dev${path}`,
-        ogImage: "https://pdfo.dev/og-image.jpg",
-        ogType: "article",
-        structuredData: {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": post.title,
-          "description": post.description,
-          "author": {
-            "@type": "Organization",
-            "name": "PDFo.dev"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "PDFo.dev",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://pdfo.dev/logo.png"
-            }
-          },
-          "datePublished": post.publishDate,
-          "dateModified": post.publishDate,
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": `https://pdfo.dev${path}`
-          },
-          "image": {
-            "@type": "ImageObject",
-            "url": "https://pdfo.dev/og-image.jpg",
-            "width": 1200,
-            "height": 630
-          },
-          "articleBody": post.content.substring(0, 1000) + "...",
-          "wordCount": post.content.split(' ').length,
-          "timeRequired": post.readTime,
-          "url": `https://pdfo.dev${path}`
-        }
-      };
+  const seoData: Record<string, SEOTemplate> = {
+    '/': DEFAULT_SEO,
+    '/merge-pdf': {
+      title: 'Merge PDF Files Online - Free PDF Merger Tool | PDFo.dev',
+      description: 'Merge multiple PDF files into one document online for free. Easy, fast, and secure PDF merger tool. No software installation required.',
+      keywords: 'merge PDF, combine PDF, PDF merger, join PDF files, merge documents online',
+      canonical: 'https://pdfo.dev/merge-pdf',
+      ogImage: 'https://pdfo.dev/og-merge-pdf.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Merge PDF Files Online',
+        description: 'Merge multiple PDF files into one document online for free',
+        url: 'https://pdfo.dev/merge-pdf'
+      }
+    },
+    '/split-pdf': {
+      title: 'Split PDF Files Online - Free PDF Splitter Tool | PDFo.dev',
+      description: 'Split PDF files into separate pages or extract specific pages online for free. Fast and secure PDF splitter tool.',
+      keywords: 'split PDF, extract PDF pages, PDF splitter, divide PDF, separate PDF pages',
+      canonical: 'https://pdfo.dev/split-pdf',
+      ogImage: 'https://pdfo.dev/og-split-pdf.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Split PDF Files Online',
+        description: 'Split PDF files into separate pages or extract specific pages online for free',
+        url: 'https://pdfo.dev/split-pdf'
+      }
+    },
+    '/compress-pdf': {
+      title: 'Compress PDF Files Online - Free PDF Compressor | PDFo.dev',
+      description: 'Compress PDF files to reduce size while maintaining quality. Free online PDF compression tool with adjustable quality settings.',
+      keywords: 'compress PDF, reduce PDF size, PDF compressor, optimize PDF, shrink PDF file',
+      canonical: 'https://pdfo.dev/compress-pdf',
+      ogImage: 'https://pdfo.dev/og-compress-pdf.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Compress PDF Files Online',
+        description: 'Compress PDF files to reduce size while maintaining quality',
+        url: 'https://pdfo.dev/compress-pdf'
+      }
+    },
+    '/pdf-to-word': {
+      title: 'Convert PDF to Word Online - Free PDF to DOC Converter | PDFo.dev',
+      description: 'Convert PDF files to Word documents online for free. Maintain formatting and layout when converting PDF to DOC/DOCX.',
+      keywords: 'PDF to Word, convert PDF to DOC, PDF to DOCX, PDF converter, document converter',
+      canonical: 'https://pdfo.dev/pdf-to-word',
+      ogImage: 'https://pdfo.dev/og-pdf-to-word.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Convert PDF to Word Online',
+        description: 'Convert PDF files to Word documents online for free',
+        url: 'https://pdfo.dev/pdf-to-word'
+      }
+    },
+    '/word-to-pdf': {
+      title: 'Convert Word to PDF Online - Free DOC to PDF Converter | PDFo.dev',
+      description: 'Convert Word documents to PDF files online for free. Transform DOC and DOCX files to PDF format instantly.',
+      keywords: 'Word to PDF, convert DOC to PDF, DOCX to PDF, document converter, create PDF',
+      canonical: 'https://pdfo.dev/word-to-pdf',
+      ogImage: 'https://pdfo.dev/og-word-to-pdf.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Convert Word to PDF Online',
+        description: 'Convert Word documents to PDF files online for free',
+        url: 'https://pdfo.dev/word-to-pdf'
+      }
+    },
+    '/pdf-to-jpg': {
+      title: 'Convert PDF to JPG Online - Free PDF to Image Converter | PDFo.dev',
+      description: 'Convert PDF pages to JPG images online for free. High-quality PDF to image conversion with customizable settings.',
+      keywords: 'PDF to JPG, convert PDF to image, PDF to PNG, extract images from PDF',
+      canonical: 'https://pdfo.dev/pdf-to-jpg',
+      ogImage: 'https://pdfo.dev/og-pdf-to-jpg.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Convert PDF to JPG Online',
+        description: 'Convert PDF pages to JPG images online for free',
+        url: 'https://pdfo.dev/pdf-to-jpg'
+      }
+    },
+    '/about': {
+      title: 'About PDFo.dev - Free Online PDF Tools | PDFo.dev',
+      description: 'Learn about PDFo.dev, our mission to provide free, secure, and easy-to-use PDF tools for everyone worldwide.',
+      keywords: 'about PDFo.dev, PDF tools company, free PDF software, online document tools',
+      canonical: 'https://pdfo.dev/about',
+      ogImage: 'https://pdfo.dev/og-about.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'About PDFo.dev',
+        description: 'Learn about PDFo.dev and our mission to provide free PDF tools',
+        url: 'https://pdfo.dev/about'
+      }
+    },
+    '/blog': {
+      title: 'PDF Tools Blog - Tips, Guides & Best Practices | PDFo.dev',
+      description: 'Expert tips, comprehensive guides, and best practices for PDF editing, conversion, and optimization. Learn from PDF professionals.',
+      keywords: 'PDF blog, PDF tips, PDF guides, document management, PDF best practices',
+      canonical: 'https://pdfo.dev/blog',
+      ogImage: 'https://pdfo.dev/og-blog.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'Blog',
+        name: 'PDFo.dev Blog',
+        description: 'Expert tips and guides for PDF tools and document management',
+        url: 'https://pdfo.dev/blog'
+      }
+    },
+    '/help-center': {
+      title: 'Help Center - PDF Tools Support & Tutorials | PDFo.dev',
+      description: 'Get help with PDFo.dev tools. Find tutorials, troubleshooting guides, and answers to common questions.',
+      keywords: 'PDF help, PDF tutorials, PDF support, how to use PDF tools, PDF troubleshooting',
+      canonical: 'https://pdfo.dev/help-center',
+      ogImage: 'https://pdfo.dev/og-help.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Help Center',
+        description: 'Get help with PDFo.dev tools and find tutorials',
+        url: 'https://pdfo.dev/help-center'
+      }
+    },
+    '/faq': {
+      title: 'Frequently Asked Questions - PDF Tools FAQ | PDFo.dev',
+      description: 'Find answers to common questions about PDFo.dev PDF tools, file security, supported formats, and more.',
+      keywords: 'PDF FAQ, PDF questions, PDF help, PDF tools support, document conversion questions',
+      canonical: 'https://pdfo.dev/faq',
+      ogImage: 'https://pdfo.dev/og-faq.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        name: 'Frequently Asked Questions',
+        description: 'Find answers to common questions about PDFo.dev PDF tools',
+        url: 'https://pdfo.dev/faq'
+      }
+    },
+    '/privacy-policy': {
+      title: 'Privacy Policy - Data Protection & Security | PDFo.dev',
+      description: 'Read our privacy policy to understand how we protect your data and files when using PDFo.dev PDF tools.',
+      keywords: 'privacy policy, data protection, file security, GDPR compliance, user privacy',
+      canonical: 'https://pdfo.dev/privacy-policy',
+      ogImage: 'https://pdfo.dev/og-privacy.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Privacy Policy',
+        description: 'PDFo.dev privacy policy and data protection information',
+        url: 'https://pdfo.dev/privacy-policy'
+      }
+    },
+    '/terms-of-service': {
+      title: 'Terms of Service - Usage Terms & Conditions | PDFo.dev',
+      description: 'Read the terms of service for using PDFo.dev PDF tools. Understand your rights and responsibilities.',
+      keywords: 'terms of service, usage terms, legal terms, service agreement, user agreement',
+      canonical: 'https://pdfo.dev/terms-of-service',
+      ogImage: 'https://pdfo.dev/og-terms.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Terms of Service',
+        description: 'PDFo.dev terms of service and usage agreement',
+        url: 'https://pdfo.dev/terms-of-service'
+      }
+    },
+    '/security': {
+      title: 'Security - File Protection & Data Safety | PDFo.dev',
+      description: 'Learn about our security measures to protect your files and data when using PDFo.dev PDF tools.',
+      keywords: 'PDF security, file protection, data safety, secure PDF tools, encryption',
+      canonical: 'https://pdfo.dev/security',
+      ogImage: 'https://pdfo.dev/og-security.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Security',
+        description: 'PDFo.dev security measures and file protection',
+        url: 'https://pdfo.dev/security'
+      }
+    },
+    '/status': {
+      title: 'System Status - Service Health & Uptime | PDFo.dev',
+      description: 'Check the current status of PDFo.dev services. View uptime statistics and service health information.',
+      keywords: 'system status, service uptime, PDF tools status, service health, system monitoring',
+      canonical: 'https://pdfo.dev/status',
+      ogImage: 'https://pdfo.dev/og-status.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'System Status',
+        description: 'PDFo.dev system status and service health information',
+        url: 'https://pdfo.dev/status'
+      }
+    },
+    '/api-docs': {
+      title: 'API Documentation - Developer Resources | PDFo.dev',
+      description: 'Complete API documentation for PDFo.dev PDF processing services. Learn how to integrate our tools into your applications.',
+      keywords: 'PDF API, developer documentation, API integration, PDF processing API, developer resources',
+      canonical: 'https://pdfo.dev/api-docs',
+      ogImage: 'https://pdfo.dev/og-api.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'API Documentation',
+        description: 'Complete API documentation for PDFo.dev PDF processing services',
+        url: 'https://pdfo.dev/api-docs'
+      }
+    },
+    '/cookie-policy': {
+      title: 'Cookie Policy - Browser Cookies & Tracking | PDFo.dev',
+      description: 'Learn about our cookie policy and how we use cookies to improve your experience on PDFo.dev.',
+      keywords: 'cookie policy, browser cookies, tracking policy, website cookies, privacy settings',
+      canonical: 'https://pdfo.dev/cookie-policy',
+      ogImage: 'https://pdfo.dev/og-cookies.jpg',
+      ogType: 'website',
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Cookie Policy',
+        description: 'PDFo.dev cookie policy and tracking information',
+        url: 'https://pdfo.dev/cookie-policy'
+      }
     }
-  }
-  
-  const pageSEO = PAGE_SEO[path] || {};
-  return {
-    ...DEFAULT_SEO,
-    ...pageSEO
   };
+
+  return seoData[path] || DEFAULT_SEO;
 }
 
 export function generateMetaTags(seoData: SEOTemplate): string {
@@ -533,82 +282,583 @@ export function generateMetaTags(seoData: SEOTemplate): string {
     <title>${seoData.title}</title>
     <meta name="description" content="${seoData.description}" />
     <meta name="keywords" content="${seoData.keywords}" />
-    <meta name="author" content="PDFo.dev" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="en" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="distribution" content="global" />
-    <meta name="rating" content="general" />
-    
     <link rel="canonical" href="${seoData.canonical}" />
     
+    <!-- Open Graph -->
     <meta property="og:title" content="${seoData.title}" />
     <meta property="og:description" content="${seoData.description}" />
-    <meta property="og:url" content="${seoData.canonical}" />
     <meta property="og:type" content="${seoData.ogType}" />
+    <meta property="og:url" content="${seoData.canonical}" />
     <meta property="og:image" content="${seoData.ogImage}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="PDFo.dev" />
-    <meta property="og:locale" content="en_US" />
     
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@pdfodev" />
-    <meta name="twitter:creator" content="@pdfodev" />
     <meta name="twitter:title" content="${seoData.title}" />
     <meta name="twitter:description" content="${seoData.description}" />
     <meta name="twitter:image" content="${seoData.ogImage}" />
     
+    <!-- Structured Data -->
     <script type="application/ld+json">
-    ${JSON.stringify(seoData.structuredData, null, 2)}
+      ${JSON.stringify(seoData.structuredData, null, 2)}
     </script>
   `;
 }
 
-// 블로그 포스트의 HTML 콘텐츠를 마크다운에서 HTML로 변환하는 간단한 함수
 function convertMarkdownToHTML(markdown: string): string {
   return markdown
-    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
-    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
     .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-    .replace(/^\*\*(.+)\*\*:/gm, '<strong>$1</strong>:')
-    .replace(/^\* (.+)$/gm, '<li>$1</li>')
-    .replace(/^- (.+)$/gm, '<li>$1</li>')
-    .replace(/^(\d+\. .+)$/gm, '<li>$1</li>')
-    .replace(/(?:^|\n)(.+)(?=\n|$)/g, '<p>$1</p>')
-    .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
-    .replace(/<\/ul>\s*<ul>/g, '')
-    .replace(/<p>(<h[1-6]>.*<\/h[1-6]>)<\/p>/g, '$1')
-    .replace(/<p>(<ul>.*<\/ul>)<\/p>/gs, '$1')
-    .replace(/<p>\s*<\/p>/g, '');
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/^(.+)$/gm, '<p>$1</p>')
+    .replace(/<p><h([1-6])>/g, '<h$1>')
+    .replace(/<\/h([1-6])><\/p>/g, '</h$1>');
+}
+
+function generatePageContent(path: string): string {
+  const pageContent: Record<string, string> = {
+    '/': `
+      <section class="hero">
+        <h1>Every tool you need to work with PDFs in one place</h1>
+        <p>Free, secure, and easy to use. Process PDF files online without software installation.</p>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <h3><a href="/merge-pdf">Merge PDF</a></h3>
+            <p>Combine multiple PDF files into one document</p>
+            <a href="/merge-pdf">Try Now</a>
+          </div>
+          <div class="tool-card">
+            <h3><a href="/split-pdf">Split PDF</a></h3>
+            <p>Extract pages or split PDF into separate files</p>
+            <a href="/split-pdf">Try Now</a>
+          </div>
+          <div class="tool-card">
+            <h3><a href="/compress-pdf">Compress PDF</a></h3>
+            <p>Reduce PDF file size while maintaining quality</p>
+            <a href="/compress-pdf">Try Now</a>
+          </div>
+          <div class="tool-card">
+            <h3><a href="/pdf-to-word">PDF to Word</a></h3>
+            <p>Convert PDF documents to editable Word files</p>
+            <a href="/pdf-to-word">Try Now</a>
+          </div>
+          <div class="tool-card">
+            <h3><a href="/word-to-pdf">Word to PDF</a></h3>
+            <p>Convert Word documents to PDF format</p>
+            <a href="/word-to-pdf">Try Now</a>
+          </div>
+          <div class="tool-card">
+            <h3><a href="/pdf-to-jpg">PDF to JPG</a></h3>
+            <p>Convert PDF pages to JPG images</p>
+            <a href="/pdf-to-jpg">Try Now</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="features">
+        <h2>Why Choose PDFo.dev?</h2>
+        <ul>
+          <li><strong>100% Free:</strong> All tools are completely free to use</li>
+          <li><strong>Secure:</strong> Files are processed securely and deleted automatically</li>
+          <li><strong>Fast:</strong> Quick processing with optimized algorithms</li>
+          <li><strong>No Installation:</strong> Works directly in your browser</li>
+          <li><strong>Cross-Platform:</strong> Works on Windows, Mac, Linux, and mobile</li>
+        </ul>
+      </section>
+    `,
+    '/merge-pdf': `
+      <section class="tool-page">
+        <h1>Merge PDF Files Online</h1>
+        <p>Combine multiple PDF files into one document easily and securely. Our PDF merger tool is free, fast, and works in your browser.</p>
+        
+        <div class="how-to">
+          <h2>How to Merge PDF Files</h2>
+          <ol>
+            <li>Upload your PDF files by clicking "Choose Files" or dragging them here</li>
+            <li>Arrange the files in the order you want them merged</li>
+            <li>Click "Merge PDF" to combine all files into one document</li>
+            <li>Download the merged PDF file to your device</li>
+          </ol>
+        </div>
+        
+        <div class="features">
+          <h2>Features</h2>
+          <ul>
+            <li><strong>Multiple Files:</strong> Merge as many PDF files as you need</li>
+            <li><strong>Preserve Quality:</strong> Original formatting and quality maintained</li>
+            <li><strong>Secure Processing:</strong> Files are deleted after processing</li>
+            <li><strong>No Size Limits:</strong> Merge large PDF files without restrictions</li>
+            <li><strong>Fast Processing:</strong> Quick merging with optimized algorithms</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    '/split-pdf': `
+      <section class="tool-page">
+        <h1>Split PDF Files Online</h1>
+        <p>Extract pages or split PDF documents into separate files. Our PDF splitter tool is free, secure, and easy to use.</p>
+        
+        <div class="how-to">
+          <h2>How to Split PDF Files</h2>
+          <ol>
+            <li>Upload your PDF file by clicking "Choose File" or dragging it here</li>
+            <li>Select splitting mode: individual pages or page ranges</li>
+            <li>Specify page numbers or ranges if needed</li>
+            <li>Click "Split PDF" to process the document</li>
+            <li>Download the split PDF files as a ZIP archive</li>
+          </ol>
+        </div>
+        
+        <div class="features">
+          <h2>Features</h2>
+          <ul>
+            <li><strong>Flexible Splitting:</strong> Split by pages, ranges, or extract specific pages</li>
+            <li><strong>Batch Processing:</strong> Process multiple splits at once</li>
+            <li><strong>Quality Preservation:</strong> Maintain original formatting and quality</li>
+            <li><strong>Secure:</strong> Files are processed securely and deleted automatically</li>
+            <li><strong>ZIP Download:</strong> Get all split files in one convenient download</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    '/compress-pdf': `
+      <section class="tool-page">
+        <h1>Compress PDF Files Online</h1>
+        <p>Reduce PDF file size while maintaining quality. Our PDF compressor uses advanced algorithms to optimize your documents.</p>
+        
+        <div class="how-to">
+          <h2>How to Compress PDF Files</h2>
+          <ol>
+            <li>Upload your PDF file by clicking "Choose File" or dragging it here</li>
+            <li>Select compression quality: low, medium, or high</li>
+            <li>Click "Compress PDF" to optimize the file</li>
+            <li>Download the compressed PDF file</li>
+          </ol>
+        </div>
+        
+        <div class="features">
+          <h2>Features</h2>
+          <ul>
+            <li><strong>Adjustable Quality:</strong> Choose compression level based on your needs</li>
+            <li><strong>Significant Size Reduction:</strong> Reduce file size by up to 70%</li>
+            <li><strong>Quality Preservation:</strong> Maintain readability and visual quality</li>
+            <li><strong>Batch Processing:</strong> Compress multiple files at once</li>
+            <li><strong>Preview:</strong> See file size reduction before downloading</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    '/pdf-to-word': `
+      <section class="tool-page">
+        <h1>Convert PDF to Word Online</h1>
+        <p>Convert PDF files to editable Word documents with preserved formatting. Our PDF to Word converter is accurate and free.</p>
+        
+        <div class="how-to">
+          <h2>How to Convert PDF to Word</h2>
+          <ol>
+            <li>Upload your PDF file by clicking "Choose File" or dragging it here</li>
+            <li>Wait for the conversion to complete</li>
+            <li>Download the converted Word document (.docx)</li>
+            <li>Open in Microsoft Word or any compatible editor</li>
+          </ol>
+        </div>
+        
+        <div class="features">
+          <h2>Features</h2>
+          <ul>
+            <li><strong>Accurate Conversion:</strong> Preserve layout, fonts, and formatting</li>
+            <li><strong>Editable Output:</strong> Get fully editable Word documents</li>
+            <li><strong>Table Support:</strong> Convert tables and complex layouts</li>
+            <li><strong>Image Preservation:</strong> Keep all images and graphics</li>
+            <li><strong>Fast Processing:</strong> Quick conversion with high accuracy</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    '/word-to-pdf': `
+      <section class="tool-page">
+        <h1>Convert Word to PDF Online</h1>
+        <p>Convert Word documents to PDF format with perfect formatting preservation. Our Word to PDF converter is fast and reliable.</p>
+        
+        <div class="how-to">
+          <h2>How to Convert Word to PDF</h2>
+          <ol>
+            <li>Upload your Word file (.doc or .docx) by clicking "Choose File" or dragging it here</li>
+            <li>Wait for the conversion to complete</li>
+            <li>Download the converted PDF file</li>
+            <li>Share or print your PDF document</li>
+          </ol>
+        </div>
+        
+        <div class="features">
+          <h2>Features</h2>
+          <ul>
+            <li><strong>Perfect Formatting:</strong> Preserve all formatting, fonts, and layouts</li>
+            <li><strong>Multiple Formats:</strong> Support for DOC and DOCX files</li>
+            <li><strong>High Quality:</strong> Professional PDF output quality</li>
+            <li><strong>Cross-Platform:</strong> Works on all devices and browsers</li>
+            <li><strong>Batch Conversion:</strong> Convert multiple files at once</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    '/pdf-to-jpg': `
+      <section class="tool-page">
+        <h1>Convert PDF to JPG Online</h1>
+        <p>Convert PDF pages to high-quality JPG images. Our PDF to JPG converter offers customizable quality settings.</p>
+        
+        <div class="how-to">
+          <h2>How to Convert PDF to JPG</h2>
+          <ol>
+            <li>Upload your PDF file by clicking "Choose File" or dragging it here</li>
+            <li>Select image quality: low, medium, or high</li>
+            <li>Click "Convert to JPG" to process the PDF</li>
+            <li>Download individual JPG files or as a ZIP archive</li>
+          </ol>
+        </div>
+        
+        <div class="features">
+          <h2>Features</h2>
+          <ul>
+            <li><strong>High Quality:</strong> Choose from multiple resolution options</li>
+            <li><strong>All Pages:</strong> Convert all pages or select specific ones</li>
+            <li><strong>Batch Download:</strong> Get all images in one ZIP file</li>
+            <li><strong>Preview:</strong> See converted images before downloading</li>
+            <li><strong>Multiple Formats:</strong> Support for JPG, PNG, and other formats</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    '/about': `
+      <section class="about-page">
+        <h1>About PDFo.dev</h1>
+        <p>PDFo.dev is a leading provider of free online PDF tools designed to make document processing simple, secure, and accessible to everyone.</p>
+        
+        <div class="mission">
+          <h2>Our Mission</h2>
+          <p>We believe that everyone should have access to professional-grade PDF tools without the need for expensive software or complicated installations. Our mission is to provide free, secure, and user-friendly PDF processing tools that work directly in your browser.</p>
+        </div>
+        
+        <div class="values">
+          <h2>Our Values</h2>
+          <ul>
+            <li><strong>Security First:</strong> Your files are processed securely and deleted automatically</li>
+            <li><strong>User Privacy:</strong> We never store or share your personal documents</li>
+            <li><strong>Quality:</strong> We use advanced algorithms to ensure high-quality output</li>
+            <li><strong>Accessibility:</strong> Our tools work on all devices and platforms</li>
+            <li><strong>Continuous Improvement:</strong> We regularly update and improve our tools</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    '/privacy-policy': `
+      <section class="legal-page">
+        <h1>Privacy Policy</h1>
+        <p>At PDFo.dev, we are committed to protecting your privacy and ensuring the security of your personal information and files.</p>
+        
+        <div class="policy-section">
+          <h2>Information We Collect</h2>
+          <ul>
+            <li>Files you upload for processing (temporarily stored only)</li>
+            <li>Basic usage analytics to improve our services</li>
+            <li>IP addresses for security and abuse prevention</li>
+            <li>Browser information for compatibility purposes</li>
+          </ul>
+        </div>
+        
+        <div class="policy-section">
+          <h2>How We Use Your Information</h2>
+          <ul>
+            <li>Process your files according to your selected tool</li>
+            <li>Improve our services and user experience</li>
+            <li>Prevent abuse and ensure service security</li>
+            <li>Provide customer support when needed</li>
+          </ul>
+        </div>
+        
+        <div class="policy-section">
+          <h2>Data Security</h2>
+          <p>We implement industry-standard security measures to protect your data:</p>
+          <ul>
+            <li>SSL encryption for all data transmission</li>
+            <li>Automatic file deletion after processing</li>
+            <li>Secure servers with regular security updates</li>
+            <li>No permanent storage of user files</li>
+          </ul>
+        </div>
+        
+        <div class="policy-section">
+          <h2>Your Rights</h2>
+          <p>You have the right to:</p>
+          <ul>
+            <li>Access information about your data processing</li>
+            <li>Request deletion of your personal data</li>
+            <li>Opt out of non-essential data collection</li>
+            <li>Contact us about privacy concerns</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    '/security': `
+      <section class="security-page">
+        <h1>Security at PDFo.dev</h1>
+        <p>We take the security of your files and data seriously. Learn about our comprehensive security measures.</p>
+        
+        <div class="security-feature">
+          <h2>SSL Encryption</h2>
+          <p>All data transmission between your browser and our servers is protected with industry-standard SSL encryption.</p>
+        </div>
+        
+        <div class="security-feature">
+          <h2>Automatic File Deletion</h2>
+          <p>Your files are automatically deleted from our servers immediately after processing. We never store your documents permanently.</p>
+        </div>
+        
+        <div class="security-feature">
+          <h2>Secure Processing</h2>
+          <p>All file processing happens in isolated, secure environments with no access to external networks during processing.</p>
+        </div>
+        
+        <div class="security-feature">
+          <h2>No File Storage</h2>
+          <p>We never permanently store your files. All processing happens in temporary, secure containers that are destroyed after use.</p>
+        </div>
+      </section>
+    `,
+    '/terms-of-service': `
+      <section class="legal-page">
+        <h1>Terms of Service</h1>
+        <p>Welcome to PDFo.dev. By using our services, you agree to these terms of service.</p>
+        <div class="terms-section">
+          <h2>Service Description</h2>
+          <p>PDFo.dev provides free online PDF processing tools including merge, split, compress, and conversion services.</p>
+        </div>
+        <div class="terms-section">
+          <h2>Acceptable Use</h2>
+          <ul>
+            <li>Use our services for legitimate purposes only</li>
+            <li>Do not upload copyrighted material without permission</li>
+            <li>Respect file size and processing limits</li>
+            <li>Do not attempt to circumvent security measures</li>
+          </ul>
+        </div>
+        <div class="terms-section">
+          <h2>Disclaimer</h2>
+          <p>Our services are provided "as is" without warranties. We are not responsible for any data loss or file corruption.</p>
+        </div>
+      </section>
+    `,
+    '/cookie-policy': `
+      <section class="legal-page">
+        <h1>Cookie Policy</h1>
+        <p>This cookie policy explains how PDFo.dev uses cookies and similar technologies.</p>
+        <div class="cookie-section">
+          <h2>What Are Cookies</h2>
+          <p>Cookies are small text files stored on your device to enhance your browsing experience.</p>
+        </div>
+        <div class="cookie-section">
+          <h2>How We Use Cookies</h2>
+          <ul>
+            <li>Essential cookies for site functionality</li>
+            <li>Analytics cookies to improve our services</li>
+            <li>Preference cookies to remember your settings</li>
+          </ul>
+        </div>
+        <div class="cookie-section">
+          <h2>Managing Cookies</h2>
+          <p>You can control cookies through your browser settings. Disabling cookies may affect site functionality.</p>
+        </div>
+      </section>
+    `,
+    '/faq': `
+      <section class="faq-page">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions about PDFo.dev's PDF tools.</p>
+        <div class="faq-item">
+          <h2>Is PDFo.dev really free?</h2>
+          <p>Yes, all our PDF tools are completely free to use with no hidden fees or subscription requirements.</p>
+        </div>
+        <div class="faq-item">
+          <h2>Is my data secure?</h2>
+          <p>Absolutely. We use SSL encryption for all data transmission and automatically delete files after processing.</p>
+        </div>
+        <div class="faq-item">
+          <h2>What file formats do you support?</h2>
+          <p>We support PDF files for all tools, plus Word documents (DOC/DOCX) for conversion tools.</p>
+        </div>
+        <div class="faq-item">
+          <h2>Are there file size limits?</h2>
+          <p>We support files up to 100MB per file. For larger files, try compressing them first.</p>
+        </div>
+        <div class="faq-item">
+          <h2>Do I need to register?</h2>
+          <p>No registration is required. You can use all tools immediately without creating an account.</p>
+        </div>
+      </section>
+    `,
+    '/help-center': `
+      <section class="help-page">
+        <h1>Help Center</h1>
+        <p>Get help with PDFo.dev's PDF tools. Find tutorials, troubleshooting guides, and support.</p>
+        <div class="help-category">
+          <h2>Getting Started</h2>
+          <ul>
+            <li>How to merge PDF files</li>
+            <li>How to split PDF documents</li>
+            <li>How to compress PDF files</li>
+            <li>How to convert PDF to Word</li>
+            <li>How to convert Word to PDF</li>
+          </ul>
+        </div>
+        <div class="help-category">
+          <h2>Troubleshooting</h2>
+          <ul>
+            <li>File won't upload</li>
+            <li>Processing takes too long</li>
+            <li>Download doesn't work</li>
+            <li>Poor output quality</li>
+            <li>Browser compatibility issues</li>
+          </ul>
+        </div>
+        <div class="help-category">
+          <h2>Advanced Features</h2>
+          <ul>
+            <li>Page range selection</li>
+            <li>Compression quality settings</li>
+            <li>Batch processing</li>
+            <li>Password-protected PDFs</li>
+            <li>Mobile usage tips</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    '/api-docs': `
+      <section class="api-page">
+        <h1>API Documentation</h1>
+        <p>Complete API documentation for PDFo.dev's PDF processing services. Learn how to integrate our tools into your applications.</p>
+        <div class="api-section">
+          <h2>Authentication</h2>
+          <p>Our API currently supports public access for basic operations. Rate limits apply to prevent abuse.</p>
+          <code>Content-Type: multipart/form-data</code>
+        </div>
+        <div class="api-section">
+          <h2>Endpoints</h2>
+          <div class="endpoint">
+            <h3>POST /api/pdf/merge</h3>
+            <p>Merge multiple PDF files into one document.</p>
+            <code>curl -X POST -F "file=@file1.pdf" -F "file=@file2.pdf" https://pdfo.dev/api/pdf/merge</code>
+          </div>
+          <div class="endpoint">
+            <h3>POST /api/pdf/split</h3>
+            <p>Split PDF file into separate pages or ranges.</p>
+            <code>curl -X POST -F "file=@document.pdf" -F "mode=pages" https://pdfo.dev/api/pdf/split</code>
+          </div>
+          <div class="endpoint">
+            <h3>POST /api/pdf/compress</h3>
+            <p>Compress PDF file to reduce size.</p>
+            <code>curl -X POST -F "file=@document.pdf" -F "quality=medium" https://pdfo.dev/api/pdf/compress</code>
+          </div>
+        </div>
+        <div class="api-section">
+          <h2>Response Format</h2>
+          <p>All endpoints return binary data (PDF files) or JSON error responses.</p>
+          <code>{"error": "Invalid file format", "code": 400}</code>
+        </div>
+      </section>
+    `,
+    '/status': `
+      <section class="status-page">
+        <h1>System Status</h1>
+        <p>Real-time system status and performance monitoring for PDFo.dev services.</p>
+        <div class="status-overview">
+          <h2>Service Status</h2>
+          <div class="service-status">
+            <span class="status-indicator operational">●</span>
+            <span class="service-name">PDF Merger</span>
+            <span class="uptime">99.9% uptime</span>
+          </div>
+          <div class="service-status">
+            <span class="status-indicator operational">●</span>
+            <span class="service-name">PDF Splitter</span>
+            <span class="uptime">99.8% uptime</span>
+          </div>
+          <div class="service-status">
+            <span class="status-indicator operational">●</span>
+            <span class="service-name">PDF Compressor</span>
+            <span class="uptime">99.9% uptime</span>
+          </div>
+          <div class="service-status">
+            <span class="status-indicator operational">●</span>
+            <span class="service-name">PDF Converter</span>
+            <span class="uptime">99.7% uptime</span>
+          </div>
+        </div>
+        <div class="performance-metrics">
+          <h2>Performance Metrics</h2>
+          <div class="metric">
+            <span class="metric-label">Average Response Time</span>
+            <span class="metric-value">2.1s</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Files Processed Today</span>
+            <span class="metric-value">15,847</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Success Rate</span>
+            <span class="metric-value">99.2%</span>
+          </div>
+        </div>
+      </section>
+    `,
+    '/blog': `
+      <section class="blog-page">
+        <h1>PDF Tools Blog</h1>
+        <p>Learn about PDF tools, tips, tricks, and best practices. Comprehensive guides for PDF editing, conversion, and optimization.</p>
+        <div class="blog-grid">
+          <article class="blog-preview">
+            <h2><a href="/blog/how-to-merge-pdf-files-online">How to Merge PDF Files Online - Complete Guide</a></h2>
+            <p>Learn how to merge PDF files online safely and efficiently. Step-by-step guide with security tips...</p>
+            <div class="blog-meta">
+              <span>January 15, 2025</span>
+              <span>8 min read</span>
+            </div>
+          </article>
+          <article class="blog-preview">
+            <h2><a href="/blog/best-pdf-compression-techniques">Best PDF Compression Techniques for 2025</a></h2>
+            <p>Discover the most effective methods to reduce PDF file size while maintaining quality...</p>
+            <div class="blog-meta">
+              <span>January 12, 2025</span>
+              <span>6 min read</span>
+            </div>
+          </article>
+          <article class="blog-preview">
+            <h2><a href="/blog/pdf-to-word-conversion-guide">PDF to Word Conversion - Complete Guide</a></h2>
+            <p>Master the art of converting PDF to Word documents with our comprehensive guide...</p>
+            <div class="blog-meta">
+              <span>January 10, 2025</span>
+              <span>7 min read</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    `
+  };
+  
+  return pageContent[path] || `
+    <section class="default-page">
+      <h1>PDFo.dev - Free PDF Tools</h1>
+      <p>Professional PDF processing tools available online for free. Secure, fast, and user-friendly.</p>
+    </section>
+  `;
 }
 
 export function generateFullHTML(path: string, content: string = ''): string {
   const seoData = getSEOData(path);
   const metaTags = generateMetaTags(seoData);
-  
-  // 블로그 포스트인 경우 실제 콘텐츠 제공
-  let blogContent = '';
-  if (path.startsWith('/blog/')) {
-    const slug = path.replace('/blog/', '');
-    const post = BLOG_POSTS[slug];
-    if (post) {
-      blogContent = `
-        <article class="blog-post">
-          <header class="blog-header">
-            <h1>${post.title}</h1>
-            <div class="blog-meta">
-              <span class="publish-date">${post.publishDate}</span>
-              <span class="read-time">${post.readTime}</span>
-            </div>
-          </header>
-          <div class="blog-content">
-            ${convertMarkdownToHTML(post.content)}
-          </div>
-        </article>
-      `;
-    }
-  }
+  const pageContent = generatePageContent(path);
   
   return `<!DOCTYPE html>
 <html lang="en">
@@ -632,7 +882,6 @@ export function generateFullHTML(path: string, content: string = ''): string {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
     <style>
-      /* 기본 스타일 - 로딩 중 표시 */
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         margin: 0;
@@ -691,68 +940,11 @@ export function generateFullHTML(path: string, content: string = ''): string {
         margin-bottom: 48px;
       }
       
-      /* 블로그 포스트 스타일 */
-      .blog-post {
-        background: #ffffff;
-        border-radius: 8px;
-        padding: 48px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        margin-bottom: 48px;
-      }
-      
-      .blog-header {
-        margin-bottom: 32px;
-        border-bottom: 1px solid #e2e8f0;
-        padding-bottom: 24px;
-      }
-      
-      .blog-header h1 {
-        font-size: 36px;
+      h1 {
+        font-size: 48px;
         color: #1e293b;
         margin-bottom: 16px;
         line-height: 1.2;
-      }
-      
-      .blog-meta {
-        display: flex;
-        gap: 16px;
-        color: #64748b;
-        font-size: 14px;
-      }
-      
-      .blog-content h2 {
-        font-size: 28px;
-        color: #1e293b;
-        margin-top: 32px;
-        margin-bottom: 16px;
-      }
-      
-      .blog-content h3 {
-        font-size: 20px;
-        color: #1e293b;
-        margin-top: 24px;
-        margin-bottom: 12px;
-      }
-      
-      .blog-content p {
-        color: #64748b;
-        font-size: 16px;
-        margin-bottom: 16px;
-      }
-      
-      .blog-content ul, .blog-content ol {
-        color: #64748b;
-        padding-left: 20px;
-        margin-bottom: 16px;
-      }
-      
-      .blog-content li {
-        margin-bottom: 8px;
-      }
-      
-      .blog-content strong {
-        color: #1e293b;
-        font-weight: 600;
       }
       
       h2 {
@@ -761,10 +953,29 @@ export function generateFullHTML(path: string, content: string = ''): string {
         margin-bottom: 16px;
       }
       
+      h3 {
+        color: #1e293b;
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+      
       p {
         color: #64748b;
         margin-bottom: 16px;
         font-size: 16px;
+      }
+      
+      .hero h1 {
+        font-size: 48px;
+        color: #1e293b;
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      
+      .hero p {
+        font-size: 20px;
+        color: #64748b;
+        margin-bottom: 32px;
       }
       
       .tools-grid {
@@ -797,230 +1008,379 @@ export function generateFullHTML(path: string, content: string = ''): string {
       }
       
       .tool-card p {
-        margin: 0;
+        color: #64748b;
+        margin-bottom: 16px;
         font-size: 14px;
+      }
+      
+      .tool-card a {
+        color: #3b82f6;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 16px;
+        border: 1px solid #3b82f6;
+        border-radius: 4px;
+        display: inline-block;
+        transition: all 0.2s;
+      }
+      
+      .tool-card a:hover {
+        background-color: #3b82f6;
+        color: #ffffff;
       }
       
       ul {
         color: #64748b;
+        padding-left: 20px;
+        margin-bottom: 16px;
       }
       
-      ul li {
+      li {
         margin-bottom: 8px;
       }
       
-      ul li strong {
+      ol {
+        color: #64748b;
+        padding-left: 20px;
+        margin-bottom: 16px;
+      }
+      
+      .features, .how-to {
+        margin-top: 32px;
+        padding: 24px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .mission, .values {
+        margin-top: 32px;
+        padding: 24px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .policy-section, .terms-section, .cookie-section {
+        margin-top: 32px;
+        padding: 24px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .security-feature {
+        margin-top: 32px;
+        padding: 24px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .faq-item {
+        margin-bottom: 24px;
+        padding: 24px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .help-category {
+        margin-top: 32px;
+        padding: 24px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .api-section {
+        margin-top: 32px;
+        padding: 24px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .endpoint {
+        margin-top: 24px;
+        padding: 16px;
+        background: #f8fafc;
+        border-radius: 4px;
+        border: 1px solid #e2e8f0;
+      }
+      
+      code {
+        background: #f1f5f9;
+        color: #1e293b;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-family: 'Monaco', 'Consolas', monospace;
+        font-size: 13px;
+      }
+      
+      .endpoint code {
+        display: block;
+        background: #1e293b;
+        color: #f8fafc;
+        padding: 12px;
+        border-radius: 4px;
+        margin-top: 8px;
+        white-space: pre-wrap;
+        overflow-x: auto;
+      }
+      
+      .status-overview {
+        margin-top: 32px;
+        padding: 24px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .service-status {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      
+      .service-status:last-child {
+        border-bottom: none;
+      }
+      
+      .status-indicator {
+        font-size: 20px;
+        line-height: 1;
+      }
+      
+      .status-indicator.operational {
+        color: #10b981;
+      }
+      
+      .service-name {
+        flex: 1;
+        font-weight: 500;
         color: #1e293b;
       }
       
-      footer {
+      .uptime {
+        color: #64748b;
+        font-size: 14px;
+      }
+      
+      .performance-metrics {
+        margin-top: 32px;
+        padding: 24px;
         background: #ffffff;
-        border-top: 1px solid #e2e8f0;
-        padding: 24px 0;
-        margin-top: 48px;
-        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       }
       
-      footer p {
-        margin: 0 0 16px 0;
+      .metric {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      
+      .metric:last-child {
+        border-bottom: none;
+      }
+      
+      .metric-label {
         color: #64748b;
-        font-size: 14px;
       }
       
-      footer nav {
-        font-size: 14px;
+      .metric-value {
+        font-weight: 600;
+        color: #1e293b;
       }
       
-      footer nav a {
-        color: #64748b;
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        margin-top: 24px;
+      }
+      
+      .blog-preview {
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e2e8f0;
+      }
+      
+      .blog-preview h2 {
+        margin: 0 0 12px 0;
+        font-size: 18px;
+      }
+      
+      .blog-preview h2 a {
+        color: #1e293b;
         text-decoration: none;
-        margin: 0 8px;
       }
       
-      footer nav a:hover {
+      .blog-preview h2 a:hover {
         color: #3b82f6;
       }
       
-      .loading {
+      .blog-preview p {
+        color: #64748b;
+        margin-bottom: 16px;
+        font-size: 14px;
+      }
+      
+      .blog-preview .blog-meta {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        flex-direction: column;
-        text-align: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(248, 250, 252, 0.9);
-        z-index: 1000;
-      }
-      
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 4px solid #e5e7eb;
-        border-top: 4px solid #3b82f6;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin-bottom: 16px;
-      }
-      
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      
-      .loading-text {
-        color: #64748b;
-        font-size: 16px;
-        margin-bottom: 8px;
-      }
-      
-      .noscript-message {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 24px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-      
-      .noscript-message h1 {
-        color: #1e293b;
-        margin-bottom: 16px;
-      }
-      
-      .noscript-message p {
-        color: #64748b;
-        line-height: 1.6;
-        margin-bottom: 16px;
+        gap: 16px;
+        color: #94a3b8;
+        font-size: 12px;
       }
       
       @media (max-width: 768px) {
+        .tools-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .blog-grid {
+          grid-template-columns: 1fr;
+        }
+        
         nav ul {
           flex-direction: column;
           gap: 8px;
         }
         
-        .tools-grid {
-          grid-template-columns: 1fr;
+        .hero h1 {
+          font-size: 36px;
         }
         
-        h2 {
-          font-size: 24px;
+        .hero p {
+          font-size: 18px;
         }
-        
-        .tool-card {
-          padding: 16px;
-        }
+      }
+      
+      footer {
+        background: #1e293b;
+        color: #f8fafc;
+        padding: 48px 0 24px;
+        margin-top: 48px;
+      }
+      
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 16px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 32px;
+      }
+      
+      .footer-section h3 {
+        color: #f8fafc;
+        margin-bottom: 16px;
+        font-size: 18px;
+      }
+      
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .footer-section li {
+        margin-bottom: 8px;
+      }
+      
+      .footer-section a {
+        color: #94a3b8;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      
+      .footer-section a:hover {
+        color: #f8fafc;
+      }
+      
+      .footer-bottom {
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid #334155;
+        text-align: center;
+        color: #94a3b8;
+        font-size: 14px;
       }
     </style>
   </head>
   <body>
-    <div id="root">
-      <!-- SEO 콘텐츠 - 검색엔진 크롤러용 -->
-      <header>
-        <h1>PDFo.dev - Free PDF Tools Online</h1>
-        <nav>
+    <header>
+      <h1>PDFo.dev</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/merge-pdf">Merge PDF</a></li>
+          <li><a href="/split-pdf">Split PDF</a></li>
+          <li><a href="/compress-pdf">Compress PDF</a></li>
+          <li><a href="/pdf-to-word">PDF to Word</a></li>
+          <li><a href="/word-to-pdf">Word to PDF</a></li>
+          <li><a href="/pdf-to-jpg">PDF to JPG</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/help-center">Help</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      ${pageContent}
+    </main>
+    
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>PDF Tools</h3>
           <ul>
-            <li><a href="/">Home</a></li>
             <li><a href="/merge-pdf">Merge PDF</a></li>
             <li><a href="/split-pdf">Split PDF</a></li>
             <li><a href="/compress-pdf">Compress PDF</a></li>
             <li><a href="/pdf-to-word">PDF to Word</a></li>
             <li><a href="/word-to-pdf">Word to PDF</a></li>
             <li><a href="/pdf-to-jpg">PDF to JPG</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/about">About</a></li>
           </ul>
-        </nav>
-      </header>
-      
-      <main>
-        ${blogContent || `
-          <section>
-            <h2>Free Online PDF Tools</h2>
-            <p>PDFo.dev offers a comprehensive suite of free online PDF tools for all your document processing needs. Our tools are fast, secure, and require no registration.</p>
-            
-            <div class="tools-grid">
-              <div class="tool-card">
-                <h3><a href="/merge-pdf">Merge PDF Files</a></h3>
-                <p>Combine multiple PDF files into a single document quickly and easily.</p>
-              </div>
-              
-              <div class="tool-card">
-                <h3><a href="/split-pdf">Split PDF Files</a></h3>
-                <p>Extract specific pages or split PDF documents into multiple files.</p>
-              </div>
-              
-              <div class="tool-card">
-                <h3><a href="/compress-pdf">Compress PDF Files</a></h3>
-                <p>Reduce PDF file size while maintaining document quality.</p>
-              </div>
-              
-              <div class="tool-card">
-                <h3><a href="/pdf-to-word">Convert PDF to Word</a></h3>
-                <p>Transform PDF documents into editable Word files (DOC/DOCX).</p>
-              </div>
-              
-              <div class="tool-card">
-                <h3><a href="/word-to-pdf">Convert Word to PDF</a></h3>
-                <p>Create PDF documents from Word files with perfect formatting.</p>
-              </div>
-              
-              <div class="tool-card">
-                <h3><a href="/pdf-to-jpg">Convert PDF to Images</a></h3>
-                <p>Extract PDF pages as high-quality JPG images.</p>
-              </div>
-            </div>
-          </section>
-          
-          <section>
-            <h2>Why Choose PDFo.dev?</h2>
-            <ul>
-              <li><strong>100% Free:</strong> All tools are completely free to use with no hidden fees</li>
-              <li><strong>Secure:</strong> Files are processed securely and deleted after 1 hour</li>
-              <li><strong>Fast:</strong> Lightning-fast processing with cloud infrastructure</li>
-              <li><strong>No Registration:</strong> Start using tools immediately without signing up</li>
-              <li><strong>Browser-Based:</strong> Works on any device with a web browser</li>
-              <li><strong>High Quality:</strong> Maintain original document quality during processing</li>
-            </ul>
-          </section>
-        `}
-      </main>
-      
-      <footer>
-        <p>&copy; 2025 PDFo.dev - Free PDF Tools Online. All rights reserved.</p>
-        <nav>
-          <a href="/privacy-policy">Privacy Policy</a> | 
-          <a href="/terms-of-service">Terms of Service</a> | 
-          <a href="/cookie-policy">Cookie Policy</a> | 
-          <a href="/security">Security</a> | 
-          <a href="/about">About</a>
-        </nav>
-      </footer>
-      
-      <div class="loading" style="display: none;">
-        <div class="spinner"></div>
-        <div class="loading-text">Loading PDFo.dev...</div>
-        <div class="loading-text">Free PDF Tools Online</div>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="/help-center">Help Center</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/api-docs">API Docs</a></li>
+            <li><a href="/status">Status</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+            <li><a href="/cookie-policy">Cookie Policy</a></li>
+            <li><a href="/security">Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    
-    <noscript>
-      <div class="noscript-message">
-        <h1>PDFo.dev - Free PDF Tools Online</h1>
-        <p>Free online PDF tools for merging, splitting, compressing, and converting PDFs. Fast, secure, and no registration required.</p>
-        <p><strong>JavaScript is required</strong> to use our PDF tools. Please enable JavaScript in your browser to access all features.</p>
-        <p>Our tools work entirely in your browser for maximum security and privacy.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PDFo.dev. All rights reserved. Free online PDF tools for everyone.</p>
       </div>
-    </noscript>
-    
-    <script type="module" src="/src/main.tsx"></script>
-    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+    </footer>
   </body>
 </html>`;
 }
