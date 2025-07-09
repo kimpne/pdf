@@ -4,6 +4,7 @@ import multer from "multer";
 import { z } from "zod";
 import { storage } from "./storage";
 import { PDFProcessor } from "./services/pdf-processor";
+import { generateFullHTML } from "./seo-templates";
 
 // Extend Express Request type for multer
 interface MulterRequest extends Request {
@@ -251,6 +252,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Job status error:', error);
       res.status(500).json({ message: 'Failed to get job status' });
     }
+  });
+
+  // SEO 최적화된 HTML 라우트 - 검색엔진 크롤러용
+  const seoRoutes = [
+    '/',
+    '/merge-pdf',
+    '/split-pdf', 
+    '/compress-pdf',
+    '/pdf-to-word',
+    '/word-to-pdf',
+    '/pdf-to-jpg',
+    '/blog',
+    '/about',
+    '/privacy-policy',
+    '/terms-of-service',
+    '/cookie-policy',
+    '/security',
+    '/faq',
+    '/help-center',
+    '/api-docs',
+    '/status'
+  ];
+
+  // 각 라우트에 대해 SEO 최적화된 HTML 제공
+  seoRoutes.forEach(route => {
+    app.get(route, (req: Request, res: Response) => {
+      const userAgent = req.get('User-Agent') || '';
+      const isBot = /bot|crawler|spider|crawling/i.test(userAgent);
+      
+      if (isBot) {
+        // 검색엔진 크롤러인 경우 SEO 최적화된 HTML 제공
+        const seoHtml = generateFullHTML(route);
+        res.setHeader('Content-Type', 'text/html');
+        res.send(seoHtml);
+      } else {
+        // 일반 사용자는 기본 React 앱으로 리디렉션
+        res.redirect('/#' + route);
+      }
+    });
   });
 
   const httpServer = createServer(app);
