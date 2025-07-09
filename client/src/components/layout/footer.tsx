@@ -25,7 +25,7 @@ export default function Footer() {
   const legalLinks = [
     { href: currentLang === 'en' ? "/privacy-policy" : `/${currentLang}/privacy-policy`, label: "Privacy Policy" },
     { href: currentLang === 'en' ? "/terms-of-service" : `/${currentLang}/terms-of-service`, label: "Terms of Service" },
-    { href: homeUrl, label: "Cookie Policy" },
+    { href: currentLang === 'en' ? "/cookie-policy" : `/${currentLang}/cookie-policy`, label: "Cookie Policy" },
     { href: homeUrl, label: "Security" },
   ];
 

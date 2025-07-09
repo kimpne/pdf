@@ -80,6 +80,7 @@ Preferred SEO approach: Comprehensive multi-language global SEO targeting intern
 - **Status Page**: `/status` - Real-time service status and uptime monitoring
 - **Privacy Policy**: `/privacy-policy` - GDPR compliant privacy policy with data protection details
 - **Terms of Service**: `/terms-of-service` - Legal terms and user agreement for PDF tools usage
+- **Cookie Policy**: `/cookie-policy` - GDPR/CCPA compliant cookie policy with browser management guides
 - **Features**: Collapsible sections, category filtering, keyword highlighting, code examples, live updates
 - **SEO**: Structured data, meta tags, and keyword optimization for search engines
 
