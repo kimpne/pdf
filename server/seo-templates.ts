@@ -279,13 +279,14 @@ export function getSEOData(path: string): SEOTemplate {
 
 export function generateMetaTags(seoData: SEOTemplate): string {
   return `
+    <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-3472753117675617" />
+    <meta name="google-site-verification" content="ca-pub-3472753117675617" />
+    
     <title>${seoData.title}</title>
     <meta name="description" content="${seoData.description}" />
     <meta name="keywords" content="${seoData.keywords}" />
     <link rel="canonical" href="${seoData.canonical}" />
-    
-    <!-- Google AdSense -->
-    <meta name="google-adsense-account" content="ca-pub-3472753117675617">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

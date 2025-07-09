@@ -82,6 +82,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get('/ads.txt', (req: Request, res: Response) => {
+    const filePath = path.join(publicPath, 'ads.txt');
+    if (fs.existsSync(filePath)) {
+      res.setHeader('Content-Type', 'text/plain');
+      res.sendFile(filePath);
+    } else {
+      res.status(404).send('ads.txt not found');
+    }
+  });
+
   // PDF Merge endpoint
   app.post('/api/pdf/merge', upload.array('file'), async (req: MulterRequest, res: Response) => {
     try {

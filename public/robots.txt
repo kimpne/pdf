@@ -54,6 +54,22 @@ Allow: /
 User-agent: Telegram
 Allow: /
 
+# Allow Google AdSense crawlers
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
 # Block problematic or aggressive crawlers
 User-agent: AhrefsBot
 Disallow: /
