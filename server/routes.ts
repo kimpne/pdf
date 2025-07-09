@@ -2,6 +2,8 @@ import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import multer from "multer";
 import { z } from "zod";
+import path from "path";
+import fs from "fs";
 import { storage } from "./storage";
 import { PDFProcessor } from "./services/pdf-processor";
 import { generateFullHTML } from "./seo-templates";
@@ -36,6 +38,50 @@ const upload = multer({
 const pdfProcessor = new PDFProcessor();
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static files from public directory (robots.txt, sitemap.xml, favicon, etc.)
+  const publicPath = path.resolve(process.cwd(), "public");
+  
+  // Specific routes for common static files
+  app.get('/robots.txt', (req: Request, res: Response) => {
+    const filePath = path.join(publicPath, 'robots.txt');
+    if (fs.existsSync(filePath)) {
+      res.setHeader('Content-Type', 'text/plain');
+      res.sendFile(filePath);
+    } else {
+      res.status(404).send('robots.txt not found');
+    }
+  });
+
+  app.get('/sitemap.xml', (req: Request, res: Response) => {
+    const filePath = path.join(publicPath, 'sitemap.xml');
+    if (fs.existsSync(filePath)) {
+      res.setHeader('Content-Type', 'application/xml');
+      res.sendFile(filePath);
+    } else {
+      res.status(404).send('sitemap.xml not found');
+    }
+  });
+
+  app.get('/favicon.svg', (req: Request, res: Response) => {
+    const filePath = path.join(publicPath, 'favicon.svg');
+    if (fs.existsSync(filePath)) {
+      res.setHeader('Content-Type', 'image/svg+xml');
+      res.sendFile(filePath);
+    } else {
+      res.status(404).send('favicon.svg not found');
+    }
+  });
+
+  app.get('/site.webmanifest', (req: Request, res: Response) => {
+    const filePath = path.join(publicPath, 'site.webmanifest');
+    if (fs.existsSync(filePath)) {
+      res.setHeader('Content-Type', 'application/json');
+      res.sendFile(filePath);
+    } else {
+      res.status(404).send('site.webmanifest not found');
+    }
+  });
+
   // PDF Merge endpoint
   app.post('/api/pdf/merge', upload.array('file'), async (req: MulterRequest, res: Response) => {
     try {
