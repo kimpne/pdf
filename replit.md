@@ -22,6 +22,7 @@ Preferred SEO approach: Comprehensive multi-language global SEO targeting intern
 - **Form Handling**: React Hook Form with Zod validation
 - **Internationalization**: Custom i18n system with 12+ language support
 - **SEO**: Multi-language SEO optimization with hreflang tags
+- **Content Pages**: Help Center and FAQ pages with SEO optimization
 
 ### Backend Architecture
 - **Runtime**: Node.js with Express.js framework
@@ -71,6 +72,12 @@ Preferred SEO approach: Comprehensive multi-language global SEO targeting intern
 - **Features**: Drag-and-drop, file validation, size limits
 - **Integration**: React Dropzone for enhanced UX
 - **Validation**: Client-side file type and size validation
+
+### Content Pages
+- **Help Center**: `/help-center` - User guides and tutorials for PDF tools
+- **FAQ Page**: `/faq` - Comprehensive frequently asked questions with SEO optimization
+- **Features**: Collapsible sections, category filtering, keyword highlighting
+- **SEO**: Structured data, meta tags, and keyword optimization for search engines
 
 ### UI Components
 - **Design System**: shadcn/ui with custom PDF tools theme
