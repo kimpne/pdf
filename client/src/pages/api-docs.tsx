@@ -51,7 +51,7 @@ const apiEndpoints: APIEndpoint[] = [
       {
         title: "cURL",
         language: "bash",
-        code: `curl -X POST "https://api.pdftools.com/api/pdf/merge" \\
+        code: `curl -X POST "https://api.pdfo.dev/api/pdf/merge" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -F "files=@file1.pdf" \\
   -F "files=@file2.pdf" \\
@@ -65,7 +65,7 @@ formData.append('files', file1);
 formData.append('files', file2);
 formData.append('filename', 'combined_document.pdf');
 
-const response = await fetch('https://api.pdftools.com/api/pdf/merge', {
+const response = await fetch('https://api.pdfo.dev/api/pdf/merge', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY'
@@ -113,7 +113,7 @@ const blob = await response.blob();
       {
         title: "cURL",
         language: "bash",
-        code: `curl -X POST "https://api.pdftools.com/api/pdf/split" \\
+        code: `curl -X POST "https://api.pdfo.dev/api/pdf/split" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -F "file=@document.pdf" \\
   -F "mode=range" \\
@@ -127,7 +127,7 @@ formData.append('file', pdfFile);
 formData.append('mode', 'range');
 formData.append('pageRange', '1-5,10-15');
 
-const response = await fetch('https://api.pdftools.com/api/pdf/split', {
+const response = await fetch('https://api.pdfo.dev/api/pdf/split', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY'
@@ -178,7 +178,7 @@ const zipBlob = await response.blob();
       {
         title: "cURL",
         language: "bash",
-        code: `curl -X POST "https://api.pdftools.com/api/pdf/compress" \\
+        code: `curl -X POST "https://api.pdfo.dev/api/pdf/compress" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -F "file=@large_document.pdf" \\
   -F "quality=medium"`
@@ -190,7 +190,7 @@ const zipBlob = await response.blob();
 formData.append('file', pdfFile);
 formData.append('quality', 'medium');
 
-const response = await fetch('https://api.pdftools.com/api/pdf/compress', {
+const response = await fetch('https://api.pdfo.dev/api/pdf/compress', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY'
@@ -233,7 +233,7 @@ const compressedBlob = await response.blob();
       {
         title: "cURL",
         language: "bash",
-        code: `curl -X POST "https://api.pdftools.com/api/pdf/to-word" \\
+        code: `curl -X POST "https://api.pdfo.dev/api/pdf/to-word" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -F "file=@document.pdf" \\
   -F "format=docx"`
@@ -245,7 +245,7 @@ const compressedBlob = await response.blob();
 formData.append('file', pdfFile);
 formData.append('format', 'docx');
 
-const response = await fetch('https://api.pdftools.com/api/pdf/to-word', {
+const response = await fetch('https://api.pdfo.dev/api/pdf/to-word', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY'
@@ -344,7 +344,7 @@ export default function APIDocs() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3">API Specifications</h3>
                   <ul className="space-y-2">
-                    <li><strong>Base URL:</strong> https://api.pdftools.com</li>
+                    <li><strong>Base URL:</strong> https://api.pdfo.dev</li>
                     <li><strong>Authentication:</strong> Bearer Token</li>
                     <li><strong>Rate Limit:</strong> 1000 requests/hour</li>
                     <li><strong>Max File Size:</strong> 100MB per file</li>
